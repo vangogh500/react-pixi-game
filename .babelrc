@@ -1,0 +1,20 @@
+{
+  "env": {
+    "test": {
+      "presets": ["es2015", "react", "flow", "stage-2"],
+      "plugins": [["flow-runtime", {
+          "assert": true,
+          "annotate": true
+        }], "transform-decorators-legacy"]
+    },
+    "dev": {
+      "presets": ["es2015", "react", "flow", "stage-2"],
+      "plugins": [["flow-runtime", {
+          "annotate": true
+        }], "transform-decorators-legacy"]
+    },
+    "development": {
+      "presets": ["es2015", "react", "flow", "stage-2"]
+    }
+  }
+}
