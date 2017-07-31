@@ -2,7 +2,7 @@
 import React from 'react'
 import ReactPropTypes from 'prop-types'
 import {Application, Container} from 'pixi.js'
-import {ContextProvider} from './hocs.js'
+import {ContextProvider, withContext} from './hocs.js'
 import {shallowCompare} from './utils.js'
 
 /**
@@ -13,7 +13,8 @@ type PropTypes = {
   autoResize: boolean,
   width: number,
   height: number,
-  children?: React.Children
+  children?: React.Children,
+  className?: string
 }
 
 type DefaultProps = {
@@ -34,7 +35,7 @@ type StateTypes = {
 /**
  * Provides the rendering for react-pixi-game
  */
-export default class Stage extends React.Component<DefaultProps, PropTypes, StateTypes> {
+class Stage extends React.Component<DefaultProps, PropTypes, StateTypes> {
   /**
    * Default props
    * @property {boolean} autoResize Defaults to true.
@@ -154,11 +155,18 @@ export default class Stage extends React.Component<DefaultProps, PropTypes, Stat
    */
   render() {
     const {Provider} = this.state
-    const {children} = this.props
+    const {children, className} = this.props
     return (
-      <Provider>
-        {children}
-      </Provider>
+      <div className={className} id="stage-container" ref="container">
+        <Provider>
+          {children}
+        </Provider>
+      </div>
     )
   }
 }
+
+const contextTypes = {
+  app: ReactPropTypes.object.isRequired
+}
+export default withContext(contextTypes)(Stage)
