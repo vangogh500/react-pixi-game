@@ -6,6 +6,7 @@
  * @flow
  */
 import React from 'react'
+import ReactPropTypes from 'prop-types'
 
 type PropTypes = {
   children?: React.Children,
@@ -43,4 +44,11 @@ export const withContext = (contextTypes: {}) => (Component: Class<React.Compone
       return <Component {...this.props} {...this.context} />
     }
   }
+}
+
+export const withLoop = (Component: Class<React.Component<*,*,*>>): Class<React.PureComponent<*,*,*>> => {
+  const contextTypes = {
+    loop: ReactPropTypes.object.isRequired
+  }
+  return withContext(contextTypes)(Component)
 }

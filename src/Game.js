@@ -70,7 +70,29 @@ export default class Game extends React.Component<void, PropTypes, StateTypes> {
    * @returns {boolean} If component should update.
    */
   shouldComponentUpdate(nextProps: PropTypes): boolean {
-    return shallowCompare(this.props, nextProps)
+    return !shallowCompare(this.props, nextProps)
+  }
+
+  /**
+   * Lifecycle hook for mounting. Starts game loop.
+   * @memberof Game
+   * @instance
+   * @method
+   * @alias componentDidMount
+   */
+  componentDidMount() {
+    this.state.app.ticker.start()
+  }
+
+  /**
+   * Lifecycle hook for mounting. Stops game loop.
+   * @memberof Game
+   * @instance
+   * @method
+   * @alias componentDidMount
+   */
+  componentWillUnmount() {
+    this.state.app.ticker.stop()
   }
 
   /**

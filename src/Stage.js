@@ -33,7 +33,14 @@ type StateTypes = {
 }
 
 /**
- * Provides the rendering for react-pixi-game
+ * Provides the rendering for react-pixi-game.
+ * @example
+ *
+ * <Game>
+ *  <Stage with={200} height={300}>
+ *   { // graphics go here }
+ *  </Stage>
+ * </Game>
  */
 class Stage extends React.Component<DefaultProps, PropTypes, StateTypes> {
   /**
@@ -143,7 +150,7 @@ class Stage extends React.Component<DefaultProps, PropTypes, StateTypes> {
    * @returns {boolean} If component should update.
    */
   shouldComponentUpdate(nextProps: PropTypes): boolean {
-    return shallowCompare(this.props, nextProps)
+    return !shallowCompare(this.props, nextProps)
   }
 
   /**
@@ -153,7 +160,7 @@ class Stage extends React.Component<DefaultProps, PropTypes, StateTypes> {
    * @instance
    * @returns {React.Element}
    */
-  render() {
+  render(): React.Element<*> {
     const {Provider} = this.state
     const {children, className} = this.props
     return (

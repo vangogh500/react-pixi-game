@@ -6,7 +6,8 @@
   "scripts": {
     "test": "karma start",
     "build": "./node_modules/.bin/webpack",
-    "doc": "documentation build src/** -f html -o docs"
+    "doc": "documentation build src/** -f html -o docs",
+    "serve-examples": "./node_modules/.bin/webpack-dev-server --config examples.webpack.js --content-base examples/"
   },
   "repository": {
     "type": "git",
@@ -43,6 +44,7 @@
   "dependencies": {
     "pixi.js": "^4.5.4",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "vangogh500-physics": "0.0.2"
   }
 }
