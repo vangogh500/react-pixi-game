@@ -4,7 +4,7 @@
   "description": "Create a game using react and pixi",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "karma start",
     "build": "./node_modules/.bin/webpack",
     "doc": "documentation build src/** -f html -o docs"
   },
@@ -30,8 +30,13 @@
     "babel-preset-stage-2": "^6.24.1",
     "flow-bin": "^0.51.1",
     "flow-runtime": "^0.14.0",
-    "jest": "^20.0.4",
-    "jsdoc-babel": "^0.3.0",
+    "jasmine": "^2.7.0",
+    "karma": "^1.7.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^2.0.4",
+    "react-test-renderer": "^15.6.1",
     "webpack": "^3.0.0",
     "webpack-dev-server": "^2.5.0"
   },

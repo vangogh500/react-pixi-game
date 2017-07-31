@@ -2,7 +2,7 @@
 import React from 'react'
 import ReactPropTypes from 'prop-types'
 import {Application, ticker} from 'pixi.js'
-import {provideContext, Wrapper} from './hocs.js'
+import {ContextProvider} from './hocs.js'
 import {shallowCompare} from './utils.js'
 /**
  * @memberof Game
@@ -15,7 +15,7 @@ type PropTypes = {
  */
 type StateTypes = {
   app: Application,
-  Provider: Class<React.Component<*,*,*>>
+  Provider: Class<React.PureComponent<*,*,*>>
 }
 
 /**
@@ -48,15 +48,16 @@ export default class Game extends React.Component<void, PropTypes, StateTypes> {
    * @method
    * @alias getChildContext
    */
-  getChildContext() {
+  getChildContext = (function() {
     return {
       app: this.state.app,
       loop: this.state.app.ticker
     }
-  }
+  }).bind(this)
+
   state = {
     app: Game.createAppWithProps(this.props),
-    Provider: provideContext(Game.childContextTypes, this.getChildContext)(Wrapper)
+    Provider: ContextProvider(Game.childContextTypes, this.getChildContext)
   }
 
   /**
@@ -81,7 +82,7 @@ export default class Game extends React.Component<void, PropTypes, StateTypes> {
    */
   render(): ?React.Element<*> {
     const {Provider} = this.state
-    const children = this.props
+    const {children} = this.props
     return (
       <Provider>
         {children}

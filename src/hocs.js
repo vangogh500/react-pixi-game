@@ -11,37 +11,22 @@ type PropTypes = {
   children?: React.Children,
   id?: string
 }
-/**
- * @class
- * @extends {React.Component}
- * Simple utility wrapper class
- */
-export class Wrapper extends React.Component<void, PropTypes, void> {
-  render() {
-    const {children, id} = this.props
-    return (
-      <div id={id}>
-        {children}
-      </div>
-    )
-  }
-}
 
 /**
  * @param {object} childContextTypes Context types using React proptypes.
  * @param {function} getChildContext Function which returns context values.
- * @returns {function} A function which takes a component and returns a hoc providing context.
+ * @returns {function} A hoc providing context.
  */
-export const provideContext = (childContextTypes: {}, getChildContext: ({}) => {}) => (Component: Class<React.Component<*,*,*>>) => {
-  return class ContextProvider extends React.Component {
+export const ContextProvider = (childContextTypes: {}, getChildContext: () => {}): Class<React.PureComponent<*,*,*>> => {
+  return class ContextProvider extends React.PureComponent {
     static childContextTypes = childContextTypes
-
     getChildContext() {
-      return getChildContext(this.props)
+      return getChildContext()
     }
-
-    render() {
-      return <Component {...this.props} />
+    render(): React.Element<*> {
+      return <div>
+        {this.props.children}
+      </div>
     }
   }
 }
@@ -50,9 +35,8 @@ export const provideContext = (childContextTypes: {}, getChildContext: ({}) => {
  * @param {object} contextTypes Context types using React proptypes.
  * @returns {function} A function which takes a component and returns a hoc which has access to context.
  */
-export const withContext = (contextTypes: {}) => (Component: Class<React.Component<*,*,*>>) => {
-
-  return class ContextConsumer extends React.Component {
+export const withContext = (contextTypes: {}) => (Component: Class<React.Component<*,*,*>>): Class<React.PureComponent<*,*,*>> => {
+  return class ContextConsumer extends React.PureComponent {
     static contextTypes = contextTypes
 
     render(): React.Element<*> {
