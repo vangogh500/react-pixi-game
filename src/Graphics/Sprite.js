@@ -36,9 +36,18 @@ type StateTypes = {
 }
 
 /**
- * React Pixi Game Sprite
+ * RPG Sprite.
+ * @example
+ *
+ * <Game>
+ *  <ResourceProvider resources={[['mario', '/img/mario.png']]}>
+ *   <Stage autoResize={true}>
+ *    <Sprite resource={'mario'} />
+ *   </Stage>
+ *  </ResourceProvider>
+ * </Game>
  */
-class RPGSprite extends React.Component<DefaultPropTypes, PropTypes, StateTypes> {
+class RPGSprite extends React.Component<DefaultPropTypes, PropTypes, *> {
   /**
    * Default props.
    * @prop {Vector} anchor Defaults to 0,0.
@@ -66,10 +75,23 @@ class RPGSprite extends React.Component<DefaultPropTypes, PropTypes, StateTypes>
     return sprite
   }
 
-  state = {
-    sprite: RPGSprite.configureSpriteWithProps(RPGSprite.createSpriteWithProps(this.props), this.props)
+  state: StateTypes
+
+  constructor(props: PropTypes) {
+    super(props)
+    this.state = {
+      sprite: RPGSprite.configureSpriteWithProps(RPGSprite.createSpriteWithProps(this.props), this.props)
+    }
   }
 
+  /**
+   * Generate sprite using props.
+   * @memberof RPGSprite
+   * @method
+   * @static
+   * @param {PropTypes} props
+   * @returns {PIXI.Sprite}
+   */
   static createSpriteWithProps(props: PropTypes): Sprite {
     const {resources, resource, texture} = props
     if(typeof texture === 'string' && resources && resource) {
