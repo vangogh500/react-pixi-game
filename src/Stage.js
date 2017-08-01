@@ -161,6 +161,7 @@ class Stage extends React.Component<DefaultProps, PropTypes, StateTypes> {
    * @returns {React.Element}
    */
   render(): React.Element<*> {
+    console.log('Stage render')
     const {Provider} = this.state
     const {children, className} = this.props
     return (

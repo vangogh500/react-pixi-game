@@ -46,9 +46,14 @@ export const withContext = (contextTypes: {}) => (Component: Class<React.Compone
   }
 }
 
-export const withLoop = (Component: Class<React.Component<*,*,*>>): Class<React.PureComponent<*,*,*>> => {
+/**
+ * Creates a hoc which provides resources through props.
+ * @param {Class<React.Component>} Component to wrap.
+ * @returns {Class<React.PureComponent>}
+ */
+export const withResources = (Component: Class<React.Component<*,*,*>>): Class<React.PureComponent<*,*,*>> => {
   const contextTypes = {
-    loop: ReactPropTypes.object.isRequired
+    resources: ReactPropTypes.object.isRequired
   }
   return withContext(contextTypes)(Component)
 }

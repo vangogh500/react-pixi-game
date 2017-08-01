@@ -1,21 +1,24 @@
 /* @flow */
 import React from 'react'
-import {Sprite, Texture, Container, Point} from 'pixi.js'
+import {Sprite, Texture, Container, Point, loaders} from 'pixi.js'
 import {Vector} from 'vangogh500-physics'
 import ReactPropTypes from 'prop-types'
 import {shallowCompare} from '../utils.js'
+import {withContext} from '../hocs.js'
 
 /**
  * @memberof RPGSprite
  */
 type PropTypes = {
-  texture: Texture,
+  texture?: Texture | string,
   container: Container,
   position: Vector,
   anchor: Vector,
   rotation: Vector,
   scale: Vector,
   alpha: number,
+  resource?: string,
+  resources?: any
 }
 
 type DefaultPropTypes = {
@@ -35,7 +38,7 @@ type StateTypes = {
 /**
  * React Pixi Game Sprite
  */
-export default class RPGSprite extends React.Component<DefaultPropTypes, PropTypes, StateTypes> {
+class RPGSprite extends React.Component<DefaultPropTypes, PropTypes, StateTypes> {
   /**
    * Default props.
    * @prop {Vector} anchor Defaults to 0,0.
@@ -64,7 +67,19 @@ export default class RPGSprite extends React.Component<DefaultPropTypes, PropTyp
   }
 
   state = {
-    sprite: RPGSprite.configureSpriteWithProps(new Sprite(this.props.texture), this.props)
+    sprite: RPGSprite.configureSpriteWithProps(RPGSprite.createSpriteWithProps(this.props), this.props)
+  }
+
+  static createSpriteWithProps(props: PropTypes): Sprite {
+    const {resources, resource, texture} = props
+    if(typeof texture === 'string' && resources && resource) {
+      return new Sprite(resources[resource].textures[texture])
+    }
+    if(!texture && resources && resource) {
+      return new Sprite(resources[resource].texture)
+    }
+    if(texture) { return new Sprite(texture)}
+    throw new ReferenceError('Incorrect prop types')
   }
 
   /**
@@ -137,6 +152,14 @@ export default class RPGSprite extends React.Component<DefaultPropTypes, PropTyp
    * @alias render
    */
   render() {
+    console.log("Sprite render")
     return null
   }
 }
+
+const contextTypes = {
+  container: ReactPropTypes.object.isRequired,
+  resources: ReactPropTypes.object
+}
+
+export default withContext(contextTypes)(RPGSprite)

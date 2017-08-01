@@ -4,12 +4,5 @@ export function shallowCompare(o1:{}, o2:{}): boolean {
   if(keys1.length !== keys2.length) {
     return false
   }
-  keys1.sort()
-  keys2.sort()
-  keys1.forEach((key1) => {
-    if(o1[key1] !== o2[key1]) {
-      return false
-    }
-  })
-  return true
+  return !keys1.some((key1) => (key1 !== 'children' && o1[key1] !== o2[key1]))
 }

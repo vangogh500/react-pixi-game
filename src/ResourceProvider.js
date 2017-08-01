@@ -19,12 +19,13 @@ type DefaultPropTypes = {
 }
 
 /**
+ * State Types
  * @memberof ResourceProvider
  */
 type StateTypes = {
-  loader: loaders.Loader,
   loaded: boolean,
-  Provider: Class<React.PureComponent<*,*,*>>
+  loader: loaders.Loader,
+  Provider: Class<React.Component<*,*,*>>
 }
 
 /**
@@ -35,8 +36,9 @@ type StateTypes = {
  *  { // resource consumers go here }
  * </ResourceProvider>
  */
-export default class ResourceProvider extends React.Component<DefaultPropTypes,PropTypes,StateTypes>  {
+export default class ResourceProvider extends React.Component<DefaultPropTypes,PropTypes,*>  {
 
+  state: StateTypes
   /**
    * Default props.
    * @memberof ResourceProvider
@@ -69,11 +71,16 @@ export default class ResourceProvider extends React.Component<DefaultPropTypes,P
     })
     return loader
   }
-  state = {
-    loader: ResourceProvider.createLoaderFromResources(this.props.resources),
-    loaded: false,
-    Provider: ContextProvider(ResourceProvider.childContextTypes, this.getChildContext)
+
+  constructor(props: PropTypes) {
+    super(props)
+    this.state = {
+      loader: ResourceProvider.createLoaderFromResources(this.props.resources),
+      loaded: false,
+      Provider: ContextProvider(ResourceProvider.childContextTypes, this.getChildContext)
+    }
   }
+
   /**
    * Gets the child context.
    * @memberof ResourceProvider
@@ -81,11 +88,11 @@ export default class ResourceProvider extends React.Component<DefaultPropTypes,P
    * @instance
    * @returns {object} Child context.
    */
-  getChildContext() {
+  getChildContext = (function() {
     return {
-      resources: this.state.loader
+      resources: this.state.loader.resources
     }
-  }
+  }).bind(this)
 
   /**
    * Life cycle hook for mounting. Loads the resources.
@@ -95,9 +102,12 @@ export default class ResourceProvider extends React.Component<DefaultPropTypes,P
    */
   componentDidMount(): void {
     const {loader} = this.state
-    loader.load(() => this.setState({
-      loaded: true
-    }))
+    loader.load((loader) => {
+      this.setState({
+        loaded: true,
+        loader: loader
+      })
+    })
   }
 
   /**
@@ -141,6 +151,7 @@ export default class ResourceProvider extends React.Component<DefaultPropTypes,P
    * @alias render
    */
   render(): ?React.Element<*> {
+    console.log("Resource provider render")
     const {children} = this.props
     const {loaded, Provider} = this.state
     if(loaded) {

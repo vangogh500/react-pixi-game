@@ -15,7 +15,7 @@ type PropTypes = {
  */
 type StateTypes = {
   app: Application,
-  Provider: Class<React.PureComponent<*,*,*>>
+  Provider: Class<React.Component<*,*,*>>
 }
 
 /**
@@ -103,6 +103,7 @@ export default class Game extends React.Component<void, PropTypes, StateTypes> {
    * @alias render
    */
   render(): ?React.Element<*> {
+    console.log('Game render')
     const {Provider} = this.state
     const {children} = this.props
     return (
