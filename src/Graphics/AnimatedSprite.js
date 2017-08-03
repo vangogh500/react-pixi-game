@@ -1,18 +1,18 @@
 /* @flow */
 import React from 'react'
-import {Sprite as PIXISprite, Point as PIXIPoint} from 'pixi.js'
-import type {PIXIContainer} from 'pixi.js'
+import {AnimatedSprite as PIXIAnimatedSprite, Texture as PIXITexture, Point} from 'pixi.js'
+import type {Container as PIXIContainer} from 'pixi.js'
 import {Vector} from 'vangogh500-physics'
 import ReactPropTypes from 'prop-types'
 import {shallowCompare} from '../utils.js'
 import {withContext} from '../hocs.js'
 
 /**
- * @memberof RPGSprite
+ * @memberof AnimatedSprite
  */
 type PropTypes = {
-  // can be url, resource name, or a tuple of resource name and texture name
-  texture: string | [string, string],
+  // can be an array of url, resource names, or tuples of resource name and texture name
+  textures: Array<string | [string,string]>,
   container: PIXIContainer,
   position: Vector,
   anchor: Vector,
@@ -30,61 +30,58 @@ type DefaultPropTypes = {
 }
 
 /**
- * @memberof RPGSprite
+ * @memberof AnimatedSprite
  */
 type StateTypes = {
-  sprite: PIXISprite
+  sprite: PIXIAnimatedSprite
 }
 
 /**
- * Sprite.
+ * Animated Sprite.
  * @example
  *
  * <Game>
- *  <ResourceProvider resources={[['mario', '/img/mario.png']]}>
+ *  <ResourceProvider resources={[['mario', '/img/mario.png', 'mario2', '/img/mario2.png']]}>
  *   <Stage autoResize={true}>
- *    <Sprite resource={'mario'} />
+ *    <AnimatedSprite resourceArray={['mario', 'mario2']} />
  *   </Stage>
  *  </ResourceProvider>
  * </Game>
  */
-class Sprite extends React.Component<DefaultPropTypes, PropTypes, StateTypes> {
-  /**
-   * Default props.
-   * @prop {Vector} anchor Defaults to 0,0.
-   * @prop {Vector} rotation Defaults to 0,0.
-   * @prop {Vector} scale Defaults to 0,0.
-   * @prop {number} alpha Defaults to 1.
-   */
+export default class AnimatedSprite extends React.Component<DefaultPropTypes, PropTypes, StateTypes> {
   static defaultProps = {
     anchor: new Vector(),
     rotation: new Vector(),
     scale: new Vector(),
-    alpha: 1
+    alpha: 0
   }
 
   /**
    * Generate sprite using props.
-   * @memberof Sprite
+   * @memberof AnimatedSprite
    * @method
    * @static
    * @param {PropTypes} props
    * @returns {PIXI.Sprite}
-   * @throws {ReferenceError} For incorrect prop types.
    */
-  static createSpriteWithProps(props: PropTypes): PIXISprite {
-    const {resources, texture} = props
-    if(typeof texture === 'string') {
-      if(resources && resources[texture]) {
-        return new PIXISprite(resources[texture].texture)
+  static createSpriteWithProps(props: PropTypes): PIXIAnimatedSprite {
+    const {resources, textures} = props
+    const textureArray = textures.map((texture) => {
+      if(typeof texture === 'string') {
+        if(resources && resources[texture]) {
+          return resources[texture]
+        }
+        else {
+          return new PIXITexture.fromImage(texture)
+        }
       }
-      return new PIXISprite(texture)
-    }
-    if(resources) {
-      const [resourceName, textureName] = texture
-      return new PIXISprite(resources[resourceName].textures[textureName])
-    }
-    throw new ReferenceError('Incorrect prop types')
+      if(resources) {
+        const [resourceName, textureName] = texture
+        return resources[resourceName].textures[textureName]
+      }
+      throw new ReferenceError('Incorrect prop types')
+    })
+    return new PIXIAnimatedSprite(textures)
   }
 
   /**
@@ -93,9 +90,9 @@ class Sprite extends React.Component<DefaultPropTypes, PropTypes, StateTypes> {
    * @prop {PropTypes} props Props to use as configuration.
    * @returns {PIXI.Sprite} Returns the configured sprite after configuration.
    */
-  static configureSpriteWithProps(sprite: PIXISprite, props: PropTypes): PIXISprite {
+  static configureSpriteWithProps(sprite: PIXIAnimatedSprite, props: PropTypes): PIXIAnimatedSprite {
     const {anchor, alpha, position, rotation, scale} = props
-    sprite.anchor = new PIXIPoint(anchor.x, anchor.y)
+    sprite.anchor = new Point(anchor.x, anchor.y)
     sprite.alpha = alpha
     sprite.setTransform(position.x, position.y, scale.x, scale.y, rotation.z)
     return sprite
@@ -106,13 +103,13 @@ class Sprite extends React.Component<DefaultPropTypes, PropTypes, StateTypes> {
   constructor(props: PropTypes) {
     super(props)
     this.state = {
-      sprite: Sprite.configureSpriteWithProps(Sprite.createSpriteWithProps(this.props), this.props)
+      sprite: AnimatedSprite.configureSpriteWithProps(AnimatedSprite.createSpriteWithProps(this.props), this.props)
     }
   }
 
   /**
    * Life cycle hook for mounting. Mounts sprite to container.
-   * @memberof RPGSprite
+   * @memberof AnimatedSprite
    * @method
    * @instance
    * @alias componentDidMount
@@ -124,7 +121,7 @@ class Sprite extends React.Component<DefaultPropTypes, PropTypes, StateTypes> {
   }
   /**
    * Life cycle hook for unmounting. Unmounts sprite from container.
-   * @memberof RPGSprite
+   * @memberof AnimatedSprite
    * @method
    * @instance
    * @alias componentWillUnmount
@@ -140,15 +137,15 @@ class Sprite extends React.Component<DefaultPropTypes, PropTypes, StateTypes> {
    * @param {PropTypes} nextProps
    */
   componentWillReceiveProps(nextProps: PropTypes): void {
-    var {texture} = nextProps
-    if(this.props.texture !== texture) {
-      this.setState({ sprite: Sprite.createSpriteWithProps(nextProps) })
+    var {textures} = nextProps
+    if(this.props.textures !== textures) {
+      this.setState({ sprite: AnimatedSprite.createSpriteWithProps(nextProps) })
     }
   }
 
   /**
    * Optimization for life cycle hooks.
-   * @memberof RPGSprite
+   * @memberof AnimatedSprite
    * @instance
    * @method
    * @alias shouldComponentUpdate
@@ -165,7 +162,7 @@ class Sprite extends React.Component<DefaultPropTypes, PropTypes, StateTypes> {
    * @param {StateTypes} nextState
    */
   componentWillUpdate(nextProps: PropTypes, nextState: StateTypes): void {
-    Sprite.configureSpriteWithProps(nextState.sprite, nextProps)
+    AnimatedSprite.configureSpriteWithProps(nextState.sprite, nextProps)
     if(nextState.sprite !== this.state.sprite || nextProps.container !== this.props.container) {
       this.props.container.removeChild(this.state.sprite)
       nextProps.container.addChild(nextState.sprite)
@@ -174,20 +171,13 @@ class Sprite extends React.Component<DefaultPropTypes, PropTypes, StateTypes> {
 
   /**
    * Renders react element.
-   * @memberof RPGSprite
+   * @memberof AnimatedSprite
    * @method
    * @instance
    * @alias render
    */
   render() {
-    console.log("Sprite render")
+    console.log("Animated sprite render")
     return null
   }
 }
-
-const contextTypes = {
-  container: ReactPropTypes.object.isRequired,
-  resources: ReactPropTypes.object
-}
-
-export default withContext(contextTypes)(Sprite)
