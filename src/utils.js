@@ -7,9 +7,10 @@ export function shallowCompare(o1:{}, o2:{}): boolean {
   return !keys1.some((key1) => (key1 !== 'children' && o1[key1] !== o2[key1]))
 }
 
-export function shallowCompareArray(a1: Array<mixed>, a2: Array<mixed>): boolean {
-  if(a1.length !== a2.lenght) {
-    return false
+export function deepCompareArray(a1: Array<mixed>, a2: Array<mixed>): boolean {
+  if(a1.length !== a2.length) { return false }
+  if(typeof a1 !== 'object' && typeof a2 !== 'object') {
+    return a1 === a2
   }
-  return a1.reduce((acc, item) => acc && a2.includes(item), true)
+  return a1.every((val, i) => deepCompareArray(val, a2[i]))
 }

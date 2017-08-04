@@ -9,8 +9,7 @@ import React from 'react'
 import ReactPropTypes from 'prop-types'
 
 type PropTypes = {
-  children?: React.Children,
-  id?: string
+  children?: React.Children
 }
 
 /**
@@ -18,16 +17,14 @@ type PropTypes = {
  * @param {function} getChildContext Function which returns context values.
  * @returns {function} A hoc providing context.
  */
-export const ContextProvider = (childContextTypes: {}, getChildContext: () => {}): Class<React.PureComponent<*,*,*>> => {
-  return class ContextProvider extends React.PureComponent {
+export const contextProvider = <P: PropTypes>(childContextTypes: {}, getChildContext: (props: P) => {}): Class<React.PureComponent<*,P,*>> => {
+  return class ContextProvider extends React.PureComponent<*,P,*> {
     static childContextTypes = childContextTypes
-    getChildContext() {
-      return getChildContext()
-    }
+    getChildContext = () => getChildContext(this.props)
     render(): React.Element<*> {
-      return <div>
+      return (<div>
         {this.props.children}
-      </div>
+      </div>)
     }
   }
 }

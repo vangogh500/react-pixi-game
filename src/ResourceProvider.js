@@ -2,8 +2,8 @@
 import React from 'react'
 import ReactPropTypes from 'prop-types'
 import {loaders} from 'pixi.js'
-import {ContextProvider} from './hocs.js'
-import {shallowCompare} from './utils.js'
+import {contextProvider} from './hocs.js'
+import {deepCompareArray} from './utils.js'
 
 /**
  * @memberof ResourceProvider
@@ -24,9 +24,14 @@ type DefaultPropTypes = {
  */
 type StateTypes = {
   loaded: boolean,
-  loader: loaders.Loader,
-  Provider: Class<React.Component<*,*,*>>
+  loader: loaders.Loader
 }
+
+const Provider = contextProvider({ resources: ReactPropTypes.object.isRequired }, (props) => {
+  return {
+    resources: props.resources
+  }
+})
 
 /**
  * Provides resources for the game.
@@ -36,8 +41,7 @@ type StateTypes = {
  *  { // resource consumers go here }
  * </ResourceProvider>
  */
-export default class ResourceProvider extends React.Component<DefaultPropTypes,PropTypes,*>  {
-
+export default class ResourceProvider extends React.PureComponent<DefaultPropTypes,PropTypes,*>  {
   state: StateTypes
   /**
    * Default props.
@@ -46,14 +50,6 @@ export default class ResourceProvider extends React.Component<DefaultPropTypes,P
    */
   static defaultProps = {
     resources: []
-  }
-  /**
-   * Child context types.
-   * @memberof ResourceProvider
-   * @alias childContextTypes
-   */
-  static childContextTypes = {
-    resources: ReactPropTypes.object.isRequired
   }
   /**
    * Creates a loader configured by the resources.
@@ -76,23 +72,9 @@ export default class ResourceProvider extends React.Component<DefaultPropTypes,P
     super(props)
     this.state = {
       loader: ResourceProvider.createLoaderFromResources(this.props.resources),
-      loaded: false,
-      Provider: ContextProvider(ResourceProvider.childContextTypes, this.getChildContext)
+      loaded: false
     }
   }
-
-  /**
-   * Gets the child context.
-   * @memberof ResourceProvider
-   * @method
-   * @instance
-   * @returns {object} Child context.
-   */
-  getChildContext = (function() {
-    return {
-      resources: this.state.loader.resources
-    }
-  }).bind(this)
 
   /**
    * Life cycle hook for mounting. Loads the resources.
@@ -101,6 +83,7 @@ export default class ResourceProvider extends React.Component<DefaultPropTypes,P
    * @instance
    */
   componentDidMount(): void {
+    console.log("Resource mount")
     const {loader} = this.state
     loader.load((loader) => {
       this.setState({
@@ -119,7 +102,7 @@ export default class ResourceProvider extends React.Component<DefaultPropTypes,P
    */
   componentWillReceiveProps(nextProps: PropTypes): void {
     // work is done with props have been changed
-    if(!shallowCompare(this.props, nextProps)) {
+    if(!deepCompareArray(this.props.resources, nextProps.resources)) {
       this.setState({ loaded: false })
       // load resources not loaded already
       const currentResourceStrings = this.props.resources.map(resource => resource.toString())
@@ -130,20 +113,6 @@ export default class ResourceProvider extends React.Component<DefaultPropTypes,P
   }
 
   /**
-   * Optimization for life cycle hooks.
-   * @memberof ResourceProvider
-   * @instance
-   * @method
-   * @alias shouldComponentUpdate
-   * @param {PropTypes} nextProps
-   * @returns {boolean} If component should update.
-   */
-  shouldComponentUpdate(nextProps: PropTypes, nextState: StateTypes): boolean {
-    // should only update on state change since componentWillReceiveProps delegates prop changes to state change
-    return !shallowCompare(this.state, nextState)
-  }
-
-  /**
    * Renders react element.
    * @memberof ResourceProvider
    * @method
@@ -151,12 +120,11 @@ export default class ResourceProvider extends React.Component<DefaultPropTypes,P
    * @alias render
    */
   render(): ?React.Element<*> {
-    console.log("Resource provider render")
     const {children} = this.props
-    const {loaded, Provider} = this.state
+    const {loaded, loader} = this.state
     if(loaded) {
       return (
-        <Provider>
+        <Provider resources={loader.resources}>
           {children}
         </Provider>
       )

@@ -1,7 +1,7 @@
 module.exports = {
-  entry: './examples/index.js',
+  entry: './playground/index.js',
   output: {
-    path: __dirname +'/build/js',
+    path: __dirname +'/playground/build/js',
     publicPath: '/js/',
     filename: 'index.js'
   },

@@ -2,7 +2,7 @@
 import React from 'react'
 import ReactPropTypes from 'prop-types'
 import {Application, Container} from 'pixi.js'
-import {ContextProvider, withContext} from './hocs.js'
+import {contextProvider, withContext} from './hocs.js'
 import {shallowCompare} from './utils.js'
 
 /**
@@ -28,9 +28,12 @@ type DefaultProps = {
 type StateTypes = {
   renderer: any,
   stage: Container,
-  view: any,
-  Provider: Class<React.PureComponent<*,*,*>>
+  view: any
 }
+
+const Provider = contextProvider({ container: ReactPropTypes.object }, (props) => {
+  return { container: props.container }
+})
 
 /**
  * Provides the rendering for react-pixi-game.
@@ -42,7 +45,7 @@ type StateTypes = {
  *  </Stage>
  * </Game>
  */
-class Stage extends React.Component<DefaultProps, PropTypes, StateTypes> {
+class Stage extends React.PureComponent<DefaultProps, PropTypes, StateTypes> {
   /**
    * Default props
    * @property {boolean} fullScreen Defaults to true.
@@ -61,25 +64,18 @@ class Stage extends React.Component<DefaultProps, PropTypes, StateTypes> {
   static childContextTypes = {
     container: ReactPropTypes.object.isRequired
   }
-  /**
-   * Get child context
-   * @memberof Stage
-   * @instance
-   * @method
-   * @alias getChildContext
-   */
-  getChildContext = (function() {
-    return {
-      container: this.state.stage
-    }
-  }).bind(this)
 
-  state = {
-    stage: this.props.app.stage,
-    renderer: this.props.app.renderer,
-    view: this.props.app.view,
-    Provider: ContextProvider(Stage.childContextTypes, this.getChildContext)
+  state: StateTypes
+
+  constructor(props: PropTypes) {
+    super(props)
+    this.state = {
+      stage: this.props.app.stage,
+      renderer: this.props.app.renderer,
+      view: this.props.app.view
+    }
   }
+
   /**
    * Resizes the stage
    * @memberof Stage
@@ -114,6 +110,7 @@ class Stage extends React.Component<DefaultProps, PropTypes, StateTypes> {
    * @alias componentDidMount
    */
   componentDidMount(): void {
+    console.log("stage mount")
     const {fullScreen, width, height} = this.props
     const {view, stage, renderer} = this.state
     if(fullScreen) {
@@ -141,19 +138,6 @@ class Stage extends React.Component<DefaultProps, PropTypes, StateTypes> {
   }
 
   /**
-   * Optimization for life cycle hooks.
-   * @memberof Stage
-   * @instance
-   * @method
-   * @alias shouldComponentUpdate
-   * @param {PropTypes} nextProps
-   * @returns {boolean} If component should update.
-   */
-  shouldComponentUpdate(nextProps: PropTypes): boolean {
-    return !shallowCompare(this.props, nextProps)
-  }
-
-  /**
    * Renders react element.
    * @memberof Stage
    * @method
@@ -161,12 +145,11 @@ class Stage extends React.Component<DefaultProps, PropTypes, StateTypes> {
    * @returns {React.Element}
    */
   render(): React.Element<*> {
-    console.log('Stage render')
-    const {Provider} = this.state
+    const {stage} = this.state
     const {children, className} = this.props
     return (
       <div className={className} id="stage-container" ref="container">
-        <Provider>
+        <Provider container={stage}>
           {children}
         </Provider>
       </div>

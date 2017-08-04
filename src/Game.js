@@ -2,7 +2,7 @@
 import React from 'react'
 import ReactPropTypes from 'prop-types'
 import {Application, ticker} from 'pixi.js'
-import {ContextProvider} from './hocs.js'
+import {contextProvider} from './hocs.js'
 import {shallowCompare} from './utils.js'
 /**
  * @memberof Game
@@ -14,10 +14,20 @@ type PropTypes = {
  * @memberof Game
  */
 type StateTypes = {
-  app: Application,
-  Provider: Class<React.Component<*,*,*>>
+  app: Application
 }
 
+const contextTypes = {
+  app: ReactPropTypes.object.isRequired,
+  loop: ReactPropTypes.object.isRequired
+}
+
+const Provider = contextProvider(contextTypes, function(props) {
+  return {
+    app: props.app,
+    loop: props.loop
+  }
+})
 /**
  * Pixi Game
  * @extends {React.Component}
@@ -39,43 +49,9 @@ export default class Game extends React.Component<void, PropTypes, StateTypes> {
   static createAppWithProps(props: PropTypes): Application {
     return new Application()
   }
-  /**
-   * Child context types.
-   */
-  static childContextTypes = {
-    app: ReactPropTypes.object.isRequired,
-    loop: ReactPropTypes.object.isRequired
-  }
-  /**
-   * Get child context
-   * @memberof Game
-   * @instance
-   * @method
-   * @alias getChildContext
-   */
-  getChildContext = (function() {
-    return {
-      app: this.state.app,
-      loop: this.state.app.ticker
-    }
-  }).bind(this)
 
   state = {
-    app: Game.createAppWithProps(this.props),
-    Provider: ContextProvider(Game.childContextTypes, this.getChildContext)
-  }
-
-  /**
-   * Optimization for life cycle hooks.
-   * @memberof Game
-   * @instance
-   * @method
-   * @alias shouldComponentUpdate
-   * @param {PropTypes} nextProps
-   * @returns {boolean} If component should update.
-   */
-  shouldComponentUpdate(nextProps: PropTypes): boolean {
-    return !shallowCompare(this.props, nextProps)
+    app: Game.createAppWithProps(this.props)
   }
 
   /**
@@ -108,11 +84,10 @@ export default class Game extends React.Component<void, PropTypes, StateTypes> {
    * @alias render
    */
   render(): ?React.Element<*> {
-    console.log('Game render')
-    const {Provider} = this.state
+    const {app} = this.state
     const {children} = this.props
     return (
-      <Provider>
+      <Provider app={app} loop={app.ticker}>
         {children}
       </Provider>
     )
