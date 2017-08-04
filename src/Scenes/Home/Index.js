@@ -27,7 +27,7 @@ export default class Home extends React.Component {
           RPG is currently in beta version 0.0.3.
         </Alert>
         <Alert color="danger">
-          Migrating to scala.js to take advantage of both the language features of scala and akka' concurrency model, which allows for multiprocesses on the browser.
+          Migrating to scala.js to take advantage of both the language features/performance advantages of scala and akka' concurrency model, which allows for multiprocesses on the browser.
         </Alert>
         <Alert color="warning">
           <h4>Dependencies</h4>
