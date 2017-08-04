@@ -37,14 +37,18 @@
     "karma-jasmine": "^1.1.0",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^2.0.4",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
     "react-test-renderer": "^15.6.1",
     "webpack": "^3.0.0",
     "webpack-dev-server": "^2.5.0"
   },
   "dependencies": {
     "pixi.js": "^4.5.4",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
     "vangogh500-physics": "0.0.2"
+  },
+  "peerDependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
   }
 }
