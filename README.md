@@ -1,2 +1,2 @@
-# react-pixi-game
-Library for creating games using Pixi and WebGL
+# react-intl-boilerplate
+Boilerplate for React Intl Apps
