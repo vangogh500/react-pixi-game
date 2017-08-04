@@ -55,15 +55,6 @@ class Stage extends React.PureComponent<DefaultProps, PropTypes, StateTypes> {
     width: 800,
     height: 600
   }
-  /**
-   * Child context types.
-   * @memberof Stage
-   * @alias childContextTypes
-   * @property {PIXI.Container} container The container to render to.
-   */
-  static childContextTypes = {
-    container: ReactPropTypes.object.isRequired
-  }
 
   state: StateTypes
 

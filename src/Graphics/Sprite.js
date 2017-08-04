@@ -8,7 +8,7 @@ import {shallowCompare} from '../utils.js'
 import {withContext} from '../hocs.js'
 
 /**
- * @memberof RPGSprite
+ * @memberof Sprite
  */
 type PropTypes = {
   // can be url, resource name, or a tuple of resource name and texture name
@@ -30,7 +30,7 @@ type DefaultPropTypes = {
 }
 
 /**
- * @memberof RPGSprite
+ * @memberof Sprite
  */
 type StateTypes = {
   sprite: PIXISprite

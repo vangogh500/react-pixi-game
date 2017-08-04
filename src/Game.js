@@ -28,6 +28,7 @@ const Provider = contextProvider(contextTypes, function(props) {
     loop: props.loop
   }
 })
+
 /**
  * Pixi Game
  * @extends {React.Component}
@@ -50,8 +51,13 @@ export default class Game extends React.Component<void, PropTypes, StateTypes> {
     return new Application()
   }
 
-  state = {
-    app: Game.createAppWithProps(this.props)
+  state: StateTypes
+
+  constructor(props: PropTypes) {
+    super(props)
+    this.state = {
+      app: Game.createAppWithProps(this.props)
+    }
   }
 
   /**
