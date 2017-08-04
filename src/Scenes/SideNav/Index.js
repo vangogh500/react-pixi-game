@@ -21,19 +21,19 @@ export default class SideNav extends React.Component<DefaultPropTypes, PropTypes
         <p className="text-uppercase">Basics</p>
         <Nav vertical>
           <NavItem>
-            <NavLink tag={Link} to='/boilerplate' className="text-grey lighten-1">Boilerplate</NavLink>
+            <NavLink tag={Link} to='/examples/boilerplate' className="text-grey lighten-1">Boilerplate</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink className="text-grey lighten-1" href="#">Container</NavLink>
+            <NavLink tag={Link} to='/examples/geometry' className="text-grey lighten-1">Drawing Geometry</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink className="text-grey lighten-1" href="#">Drawing a Geometry</NavLink>
+            <NavLink tag={Link} to='/examples/sprite' className="text-grey lighten-1">Sprites</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink className="text-grey lighten-1" href="#">Sprites</NavLink>
+            <NavLink tag={Link} to='/examples/animations' className="text-grey lighten-1">Animations</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink className="text-grey lighten-1" href="#">Animations</NavLink>
+            <NavLink tag={Link} to='/examples/container' className="text-grey lighten-1">Container</NavLink>
           </NavItem>
           <NavItem>
             <NavLink className="text-grey lighten-1" href="#">Tiling Sprites</NavLink>

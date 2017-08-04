@@ -1,0 +1,36 @@
+{
+  "frames": {
+    "girl_1.png":
+    {
+    	"frame": {"x":0,"y":0,"w":220,"h":395},
+    	"rotated": false,
+    	"trimmed": false,
+    	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":395},
+    	"sourceSize": {"w":220,"h":400}
+    },
+    "girl_2.png":
+    {
+    	"frame": {"x":220,"y":0,"w":220,"h":395},
+    	"rotated": false,
+    	"trimmed": false,
+    	"spriteSourceSize": {"x":220,"y":0,"w":220,"h":395},
+    	"sourceSize": {"w":220,"h":395}
+    },
+    "grass.png":
+    {
+    	"frame": {"x":88,"y":0,"w":32,"h":32},
+    	"rotated": false,
+    	"trimmed": false,
+    	"spriteSourceSize": {"x":88,"y":0,"w":32,"h":32},
+    	"sourceSize": {"w":32,"h":32}
+    }
+  },
+  "meta": {
+  	"app": "http://www.codeandweb.com/texturepacker",
+  	"version": "1.0",
+  	"image": "spritesheet.png",
+  	"size": {"w":600,"h":395},
+  	"scale": "1",
+  	"smartupdate": "$TexturePacker:SmartUpdate:ac8147c9985983227c7e1dc713d20843:da74f3d2f5578f73dd2602e5b5c33fd3:6503c221978700ef97921ff4e2f90596$"
+  }
+}

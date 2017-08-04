@@ -19,7 +19,7 @@ export default class Home extends React.Component {
           </li>
           <li>
             <h5>Take advantage of the modularity and simplicity of react:</h5>
-            <p>Facebook's react is becoming one of the web's most popular frameworks. Encapsulating pixi with React allows for readable and reusable code for WebGL.</p>
+            <p>Facebook's react is becoming one of the web's most popular frameworks. Encapsulating pixi with React allows for readable and reusable code for WebGL. It also allows for the integration of the visuals with the redux system.</p>
           </li>
         </ul>
         <hr />
