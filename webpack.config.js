@@ -9,6 +9,10 @@ module.exports = {
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
+  externals: {
+    'react': 'react',
+    'react-dom': 'react-dom'
+  },
   target: 'node',
   module: {
     loaders: [
