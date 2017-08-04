@@ -47,7 +47,6 @@
     "react-addons-transition-group": "^15.6.0",
     "react-dom": "^15.5.3",
     "react-intl": "^2.3.0",
-    "react-pixi-game": "0.0.1",
     "react-redux": "^5.0.5",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
