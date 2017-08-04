@@ -10,7 +10,7 @@ import {shallowCompare} from './utils.js'
  */
 type PropTypes = {
   app: Application,
-  autoResize: boolean,
+  fullScreen: boolean,
   width: number,
   height: number,
   children?: React.Children,
@@ -18,7 +18,7 @@ type PropTypes = {
 }
 
 type DefaultProps = {
-  autoResize: boolean,
+  fullScreen: boolean,
   width: number,
   height: number
 }
@@ -45,10 +45,10 @@ type StateTypes = {
 class Stage extends React.Component<DefaultProps, PropTypes, StateTypes> {
   /**
    * Default props
-   * @property {boolean} autoResize Defaults to true.
+   * @property {boolean} fullScreen Defaults to true.
    */
   static defaultProps = {
-    autoResize: true,
+    fullScreen: false,
     width: 800,
     height: 600
   }
@@ -114,9 +114,9 @@ class Stage extends React.Component<DefaultProps, PropTypes, StateTypes> {
    * @alias componentDidMount
    */
   componentDidMount(): void {
-    const {autoResize, width, height} = this.props
+    const {fullScreen, width, height} = this.props
     const {view, stage, renderer} = this.state
-    if(autoResize) {
+    if(fullScreen) {
       this.resize(window.innerWidth, window.innerHeight)
       window.addEventListener('resize', this.onResize)
     }
