@@ -21,6 +21,11 @@ type StateTypes = {
 /**
  * Pixi Game
  * @extends {React.Component}
+ * @example
+ *
+ * <Game>
+ *  { //game contents go here }
+ * </Game>
  */
 export default class Game extends React.Component<void, PropTypes, StateTypes> {
   /**

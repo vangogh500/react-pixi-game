@@ -2,7 +2,7 @@
   "name": "react-pixi-game",
   "version": "0.0.1",
   "description": "Create a game using react and pixi",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "test": "karma start",
     "build": "./node_modules/.bin/webpack",

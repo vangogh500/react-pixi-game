@@ -1,16 +1,17 @@
 /* @flow */
 import React from 'react'
-import {Container, Graphics} from 'pixi.js'
+import {Graphics as PIXIGraphics} from 'pixi.js'
+import type {PIXIContainer} from 'pixi.js'
 import {Vector} from 'vangogh500-physics'
 import ReactPropTypes from 'prop-types'
 import {shallowCompare} from '../utils.js'
 import {withContext} from '../hocs.js'
 
 /**
- * @memberof RPGGraphics
+ * @memberof Graphics
  */
 type PropTypes = {
-  container: Container,
+  container: PIXIContainer,
   color: number,
   alpha: number,
   position: Vector,
@@ -18,7 +19,7 @@ type PropTypes = {
 }
 
 /**
- * @memberof RPGGraphics
+ * @memberof Graphics
  */
 type DefaultPropTypes = {
   alpha: number,
@@ -26,16 +27,21 @@ type DefaultPropTypes = {
 }
 
 /**
- * @memberof RPGGraphics
+ * @memberof Graphics
  */
 type StateTypes = {
-  graphics: Graphics
+  graphics: PIXIGraphics
 }
 
 /**
  * Abstract class for Pixi graphics.
  */
-export default class RPGGraphics extends React.Component<DefaultPropTypes, PropTypes, *> {
+export default class Graphics extends React.Component<DefaultPropTypes, PropTypes, StateTypes> {
+  /**
+   * Default props.
+   * @prop {number} alpha Defaults to 1.
+   * @prop {Vector} position Defaults to zero vector.
+   */
   static defaultProps = {
     alpha: 1,
     position: new Vector()
@@ -47,13 +53,13 @@ export default class RPGGraphics extends React.Component<DefaultPropTypes, PropT
   constructor(props: PropTypes) {
     super(props)
     this.state = {
-      graphics: new Graphics()
+      graphics: new PIXIGraphics()
     }
   }
 
   /**
    * Drawing the shape goes here.
-   * @memberof RPGGraphics
+   * @memberof Graphics
    * @abstract
    * @method
    * @instance
@@ -61,7 +67,7 @@ export default class RPGGraphics extends React.Component<DefaultPropTypes, PropT
   +drawGraphics: () => void
   /**
    * Updates the shape.
-   * @memberof RPGGraphics
+   * @memberof Graphics
    * @method
    * @instance
    */
@@ -78,7 +84,7 @@ export default class RPGGraphics extends React.Component<DefaultPropTypes, PropT
 
   /**
    * Optimization for life cycle hooks.
-   * @memberof RPGGraphics
+   * @memberof Graphics
    * @instance
    * @method
    * @alias shouldComponentUpdate
@@ -91,7 +97,7 @@ export default class RPGGraphics extends React.Component<DefaultPropTypes, PropT
 
   /**
    * Life cycle hook for mounting.
-   * @memberof RPGGraphics
+   * @memberof Graphics
    * @instance
    * @method
    * @alias componentDidMount
@@ -105,7 +111,7 @@ export default class RPGGraphics extends React.Component<DefaultPropTypes, PropT
 
   /**
    * Life cycle hook for unmounting.
-   * @memberof RPGGraphics
+   * @memberof Graphics
    * @instance
    * @method
    * @alias componentWillUnmount
@@ -126,7 +132,7 @@ export default class RPGGraphics extends React.Component<DefaultPropTypes, PropT
 
   /**
    * Renders react element.
-   * @memberof RPGGraphics
+   * @memberof Graphics
    * @instance
    * @method
    * @alias render

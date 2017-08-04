@@ -1,23 +1,23 @@
 /* @flow */
 import React from 'react'
-import RPGGraphics from './Graphics.js'
+import Graphics from './Graphics.js'
 import ReactPropTypes from 'prop-types'
 import {withContext} from '../hocs.js'
 
 /**
- * RPG Circle
+ * Circle.
  * @example
  *
  * <Game>
  *  <Stage autoResize={true}>
- *   <RPGCircle color={0x000000} size={new Vector(100,100)} />
+ *   <Circle color={0x000000} size={new Vector(100,100)} />
  *  </Stage>
  * </Game>
  */
-class RPGCircle extends RPGGraphics {
+class Circle extends Graphics {
   /**
    * Life cycle hook for drawing the graphics.
-   * @memberof RPGCircle
+   * @memberof Circle
    * @method
    * @instance
    * @alias drawGraphics
@@ -36,4 +36,4 @@ const contextTypes = {
   container: ReactPropTypes.object.isRequired
 }
 
-export default withContext(contextTypes)(RPGCircle)
+export default withContext(contextTypes)(Circle)

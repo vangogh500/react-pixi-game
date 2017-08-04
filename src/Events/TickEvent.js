@@ -20,7 +20,7 @@ type PropTypes = {
  * handleTick = () => { this.setState({ tick: this.state.tick + 1 })}
  * render() {
  *  return (
- *   <TickEvent onClick={(delta) => this.handleTick()} />
+ *   <TickEvent onTick={(delta) => this.handleTick()} />
  *  )
  * }
  */

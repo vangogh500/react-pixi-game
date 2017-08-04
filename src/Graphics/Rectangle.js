@@ -1,6 +1,6 @@
 /* @flow */
 import React from 'react'
-import RPGGraphics from './Graphics.js'
+import Graphics from './Graphics.js'
 import ReactPropTypes from 'prop-types'
 import {withContext} from '../hocs.js'
 
@@ -10,14 +10,14 @@ import {withContext} from '../hocs.js'
  *
  * <Game>
  *  <Stage autoResize={true}>
- *   <RPGRectangle color={0x000000} size={new Vector(100,100)} />
+ *   <Rectangle color={0x000000} size={new Vector(100,100)} />
  *  </Stage>
  * </Game>
  */
-class RPGRectangle extends RPGGraphics {
+class Rectangle extends Graphics {
   /**
    * Life cycle hook for drawing the graphics.
-   * @memberof RPGCircle
+   * @memberof Rectangle
    * @method
    * @instance
    * @alias drawGraphics
@@ -38,4 +38,4 @@ const contextTypes = {
   container: ReactPropTypes.object.isRequired
 }
 
-export default withContext(contextTypes)(RPGRectangle)
+export default withContext(contextTypes)(Rectangle)

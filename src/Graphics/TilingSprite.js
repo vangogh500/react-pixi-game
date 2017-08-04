@@ -1,6 +1,6 @@
 /* @flow */
 import React from 'react'
-import {extras, Texture as PIXITexture, Point} from 'pixi.js'
+import {extras, Point as PIXIPoint} from 'pixi.js'
 import type {Container as PIXIContainer} from 'pixi.js'
 import {Vector} from 'vangogh500-physics'
 import ReactPropTypes from 'prop-types'
@@ -8,34 +8,33 @@ import {shallowCompare} from '../utils.js'
 import {withContext} from '../hocs.js'
 
 /**
- * @memberof AnimatedSprite
+ * @memberof TilingSprite
  */
 type PropTypes = {
-  // can be an array of url, resource names, or tuples of resource name and texture name
-  textures: Array<string | [string,string]>,
+  // can be a url or a duple of resource name and texture name
+  texture: string | [string,string],
+  size: Vector,
   container: PIXIContainer,
-  position: Vector,
+  fullScreen: boolean,
   anchor: Vector,
+  position: Vector,
   rotation: Vector,
   scale: Vector,
   alpha: number,
-  animationSpeed: number,
   resources?: any
 }
 
 type DefaultPropTypes = {
-  anchor: Vector,
-  rotation: Vector,
+  fullScreen: boolean,
+  anchor: number,
+  position: Vector,
+  rotation: number,
   scale: Vector,
-  alpha: number,
-  animationSpeed: number
+  alpha: number
 }
 
-/**
- * @memberof AnimatedSprite
- */
 type StateTypes = {
-  sprite: extras.AnimatedSprite
+  sprite: extras.TilingSprite
 }
 
 /**
@@ -43,14 +42,14 @@ type StateTypes = {
  * @example
  *
  * <Game>
- *  <ResourceProvider resources={[['mario', '/img/mario.png', 'mario2', '/img/mario2.png']]}>
+ *  <ResourceProvider resources={[['brick', '/img/brick.png']]}>
  *   <Stage autoResize={true}>
- *    <AnimatedSprite resourceArray={['mario', 'mario2']} />
+ *    <TilingSprite resource={'brick'} />
  *   </Stage>
  *  </ResourceProvider>
  * </Game>
  */
-class AnimatedSprite extends React.Component<DefaultPropTypes, PropTypes, StateTypes> {
+class TilingSprite extends React.Component<DefaultPropTypes, PropTypes, StateTypes> {
   /**
    * Default props.
    * @prop {Vector} anchor Defaults to zero vector.
@@ -60,55 +59,49 @@ class AnimatedSprite extends React.Component<DefaultPropTypes, PropTypes, StateT
    * @prop {number} animationSpeed Defaults to 1.
    */
   static defaultProps = {
+    fullScreen: false,
     anchor: new Vector(),
+    position: new Vector(),
     rotation: new Vector(),
     scale: new Vector(),
-    alpha: 1,
-    animationSpeed: 1
+    alpha: 1
   }
 
   /**
    * Generate sprite using props.
-   * @memberof AnimatedSprite
+   * @memberof TilingSprite
    * @method
    * @alias createSpriteWithProps
    * @param {PropTypes} props
-   * @returns {PIXI.Sprite}
+   * @returns {PIXI.extras.TilingSprite}
    */
-  static createSpriteWithProps(props: PropTypes): extras.AnimatedSprite {
-    const {resources, textures} = props
-    const textureArray = textures.map((texture) => {
-      if(typeof texture === 'string') {
-        if(resources && resources[texture]) {
-          return resources[texture].texture
-        }
-        else {
-          return new PIXITexture.fromImage(texture)
-        }
+  static createSpriteWithProps(props: PropTypes): extras.TilingSprite {
+    const {resources, texture} = props
+    if(typeof texture === 'string') {
+      if(resources && resources[texture]) {
+        return new extras.TilingSprite(resources[texture].texture)
       }
-      if(resources) {
-        const [resourceName, textureName] = texture
-        return resources[resourceName].textures[textureName]
-      }
-      throw new ReferenceError('Incorrect prop types')
-    })
-    console.log(textureArray)
-    return new extras.AnimatedSprite(textureArray)
+      return extras.TilingSprite.fromImage(texture)
+    }
+    if(resources) {
+      const [resourceName, textureName] = texture
+      return new extras.TilingSprite(resources[resourceName].textures[textureName])
+    }
+    throw new ReferenceError('Incorrect prop types')
   }
 
   /**
    * Configure a sprite using props.
-   * @prop {PIXI.Sprite} sprite The sprite to configure.
-   * @prop {PropTypes} props Props to use as configuration.
-   * @returns {PIXI.Sprite} Returns the configured sprite after configuration.
+   * @param {PIXI.Sprite} sprite The sprite to configure.
+   * @param {PropTypes} props Props to use as configuration.
+   * @returns {PIXI.extras.TilingSprite} Returns the configured sprite after configuration.
    */
-  static configureSpriteWithProps(sprite: extras.AnimatedSprite, props: PropTypes): extras.AnimatedSprite {
-    const {anchor, alpha, position, rotation, scale, animationSpeed} = props
-    sprite.anchor = new Point(anchor.x, anchor.y)
+  static configureSpriteWithProps(sprite: extras.TilingSprite, props: PropTypes): extras.TilingSprite {
+    const {size, anchor, alpha, position, rotation, scale} = props
+    sprite.size = size
+    sprite.anchor = new PIXIPoint(anchor.x, anchor.y)
     sprite.alpha = alpha
-    sprite.animationSpeed = animationSpeed
     sprite.setTransform(position.x, position.y, scale.x, scale.y, rotation.z)
-    sprite.play()
     return sprite
   }
 
@@ -117,13 +110,13 @@ class AnimatedSprite extends React.Component<DefaultPropTypes, PropTypes, StateT
   constructor(props: PropTypes) {
     super(props)
     this.state = {
-      sprite: AnimatedSprite.configureSpriteWithProps(AnimatedSprite.createSpriteWithProps(this.props), this.props)
+      sprite: TilingSprite.configureSpriteWithProps(TilingSprite.createSpriteWithProps(this.props), this.props)
     }
   }
 
   /**
    * Life cycle hook for mounting. Mounts sprite to container.
-   * @memberof AnimatedSprite
+   * @memberof TilingSprite
    * @method
    * @instance
    * @alias componentDidMount
@@ -131,12 +124,11 @@ class AnimatedSprite extends React.Component<DefaultPropTypes, PropTypes, StateT
   componentDidMount(): void {
     const {container} = this.props
     const {sprite} = this.state
-    console.log(sprite)
     container.addChild(sprite)
   }
   /**
    * Life cycle hook for unmounting. Unmounts sprite from container.
-   * @memberof AnimatedSprite
+   * @memberof TilingSprite
    * @method
    * @instance
    * @alias componentWillUnmount
@@ -152,15 +144,15 @@ class AnimatedSprite extends React.Component<DefaultPropTypes, PropTypes, StateT
    * @param {PropTypes} nextProps
    */
   componentWillReceiveProps(nextProps: PropTypes): void {
-    var {textures} = nextProps
-    if(this.props.textures !== textures) {
-      this.setState({ sprite: AnimatedSprite.createSpriteWithProps(nextProps) })
+    var {texture} = nextProps
+    if(this.props.texture !== texture) {
+      this.setState({ sprite: TilingSprite.createSpriteWithProps(nextProps) })
     }
   }
 
   /**
    * Optimization for life cycle hooks.
-   * @memberof AnimatedSprite
+   * @memberof TilingSprite
    * @instance
    * @method
    * @alias shouldComponentUpdate
@@ -177,7 +169,7 @@ class AnimatedSprite extends React.Component<DefaultPropTypes, PropTypes, StateT
    * @param {StateTypes} nextState
    */
   componentWillUpdate(nextProps: PropTypes, nextState: StateTypes): void {
-    AnimatedSprite.configureSpriteWithProps(nextState.sprite, nextProps)
+    TilingSprite.configureSpriteWithProps(nextState.sprite, nextProps)
     if(nextState.sprite !== this.state.sprite || nextProps.container !== this.props.container) {
       this.props.container.removeChild(this.state.sprite)
       nextProps.container.addChild(nextState.sprite)
@@ -186,20 +178,13 @@ class AnimatedSprite extends React.Component<DefaultPropTypes, PropTypes, StateT
 
   /**
    * Renders react element.
-   * @memberof AnimatedSprite
+   * @memberof Sprite
    * @method
    * @instance
    * @alias render
    */
   render() {
-    console.log("Animated sprite render")
+    console.log("Tiling sprite render")
     return null
   }
 }
-
-const contextTypes = {
-  container: ReactPropTypes.object.isRequired,
-  resources: ReactPropTypes.object
-}
-
-export default withContext(contextTypes)(AnimatedSprite)
