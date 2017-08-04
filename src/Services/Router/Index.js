@@ -12,6 +12,7 @@ import * as RouterTypes from './flowtypes.js'
 import LocaleProvider from '../Locale/Index.js'
 import UIContainer from '../../Scenes/UIContainer.js'
 import Home from '../../Scenes/Home/Index.js'
+import BoilerPlate from '../../Scenes/Examples/BoilerPlate.js'
 
 type PropTypes = {
   history: RouterTypes.HistoryType
@@ -37,6 +38,7 @@ export default class Router extends React.Component<void,PropTypes,void> {
           <LocaleProvider>
             <UIContainer>
               <Route exact path="/" component={Home} />
+              <Route exact path="/boilerplate" component={BoilerPlate} />
             </UIContainer>
           </LocaleProvider>
         </div>

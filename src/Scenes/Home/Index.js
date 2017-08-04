@@ -42,6 +42,15 @@ export default class Home extends React.Component {
           Feel free to message me on my Github if you would like to contribute. Link <a href="https://github.com/vangogh500">here</a>.
         </Alert>
         <hr />
+        <h4>Installation</h4>
+
+        <Alert color="info">
+          RPG is currently available on npm.
+          <br/>
+          To add it as a dependency to your project, simply run: <code>npm install --save react-pixi-game</code>
+        </Alert>
+
+        <hr />
         <h4>Dev log:</h4>
         <h5>v0.0.3</h5>
         <Label check>

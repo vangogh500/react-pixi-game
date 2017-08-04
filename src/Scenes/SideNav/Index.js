@@ -1,5 +1,7 @@
 import React from 'react'
 import {Nav, NavItem, NavLink} from 'reactstrap'
+import {Link} from 'react-router-dom'
+
 
 type PropTypes = {
   className: string
@@ -19,7 +21,7 @@ export default class SideNav extends React.Component<DefaultPropTypes, PropTypes
         <p className="text-uppercase">Basics</p>
         <Nav vertical>
           <NavItem>
-            <NavLink className="text-grey lighten-1" href="#">Boilerplate</NavLink>
+            <NavLink tag={Link} to='/boilerplate' className="text-grey lighten-1">Boilerplate</NavLink>
           </NavItem>
           <NavItem>
             <NavLink className="text-grey lighten-1" href="#">Container</NavLink>
