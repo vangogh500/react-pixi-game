@@ -2,59 +2,56 @@ import React from 'react'
 import { Jumbotron, Button, Alert, Input, Label } from 'reactstrap'
 import {FormattedMessage} from 'react-intl'
 
-console.log(FormattedMessage)
-
+// @TODO: Left hand side non selectable
 
 export default class Home extends React.Component {
   render() {
     return (
       <Jumbotron>
         <h1><FormattedMessage id="home.title" /></h1>
-        <h5>By Vangogh500 (Kai Matsuda)</h5>
+        <h5><FormattedMessage id="home.subtitle" /></h5>
         <br />
-        <p>A new way to code web applications using PIXI.js and Facebook's React.</p>
+        <p><FormattedMessage id="home.subtext" /></p>
         <hr />
-        <h4>Why use RPG?</h4>
+        <h4><FormattedMessage id="home.section_1.main_title" /></h4>
         <ul>
           <li>
-            <h5>Harness the power of WebGL:</h5>
-            <p>Take advantage of the client's gpu, allowing for a more extensive and complex app with minimal performance costs. Using both the cpu and gpu will give your apps the power it deserves.</p>
+            <h5><FormattedMessage id="home.section_1.title_1" /></h5>
+            <p><FormattedMessage id="home.section_1.text_1" /></p>
           </li>
           <li>
-            <h5>Take advantage of the modularity and simplicity of react:</h5>
-            <p>Facebook's react is becoming one of the web's most popular frameworks. Encapsulating pixi with React allows for readable and reusable code for WebGL. It also allows for the integration of the visuals with the redux system.</p>
+            <h5><FormattedMessage id="home.section_1.title_2" /></h5>
+            <p><FormattedMessage id="home.section_1.text_2" /></p>
           </li>
         </ul>
         <hr />
-        <Alert color="warning">
-          RPG is currently in beta version 0.0.9.
-        </Alert>
-        <Alert color="danger">
-          Migrating to scala.js to take advantage of both the language features/performance advantages of scala and akka' concurrency model, which allows for multiprocesses on the browser.
+        <Alert color="info">
+          <FormattedMessage id="home.notes.version" />
         </Alert>
         <Alert color="warning">
-          <h4>Dependencies</h4>
-          <p>This project is in works with vangogh500-physics a concurrent physics engine utilizing akka's concurrency model.</p>
+          <FormattedMessage id="home.notes.migration" />
+        </Alert>
+          <h4><FormattedMessage id="home.section_2.title" /></h4>
+          <p><FormattedMessage id="home.section_2.subtext" /></p>
           <ul>
             <li>Pixi.js</li>
             <li>React.js</li>
             <li>vangogh500-physics</li>
           </ul>
-        </Alert>
-        <Alert color="success">
-          Feel free to message me on my Github if you would like to contribute. Link <a href="https://github.com/vangogh500">here</a>.
-        </Alert>
         <hr />
-        <h4>Installation</h4>
+        <h4><FormattedMessage id="home.section_3.title" /></h4>
 
         <Alert color="info">
-          RPG is currently available on npm.
+          <FormattedMessage id="home.section_3.subtext_1" />
           <br/>
-          To add it as a dependency to your project, simply run: <code>npm install --save react-pixi-game</code>
+          <FormattedMessage id="home.section_3.subtext_2" />　<code>npm install --save react-pixi-game</code>
         </Alert>
 
         <hr />
-        <h4>Dev log:</h4>
+        <h4><FormattedMessage id="home.section_4.title" /></h4>
+        <Alert color="success">
+          <FormattedMessage id="home.notes.contribution.text" /> <a href="https://github.com/vangogh500"><FormattedMessage id="home.notes.contribution.link" /></a>
+        </Alert>
         <h5>v0.0.9</h5>
         <Label check>
           <Input checked disabled type="checkbox" /> App: loop, stage, loaders

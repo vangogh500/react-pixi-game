@@ -3,6 +3,8 @@ import {PrismCode} from "react-prism"
 import {Game, Stage, Rectangle, Circle} from 'react-pixi-game'
 import {Vector} from 'vangogh500-physics'
 import {Jumbotron} from 'reactstrap'
+import {FormattedMessage} from 'react-intl'
+
 
 export default class GeometryExample extends React.Component {
   render() {
@@ -16,7 +18,7 @@ export default class GeometryExample extends React.Component {
           </Stage>
         </Game>
         <Jumbotron className="m-w-800px">
-          <p className="text-muted">RPG comes with 2 basic geometric shapes to draw primitives.</p>
+          <p className="text-muted"><FormattedMessage id="geometry.line_1" /></p>
           <pre className="font-weight-500">
             <code className="text-orange">import</code>{" "}
             <code>{"{Game, Stage, Rectangle, Circle}"}</code>{" "}

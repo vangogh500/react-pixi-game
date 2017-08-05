@@ -2,8 +2,7 @@ import React from 'react'
 import {Game, Stage, ResourceProvider, TilingSprite} from 'react-pixi-game'
 import {Vector} from 'vangogh500-physics'
 import {Jumbotron} from 'reactstrap'
-
-console.log(TilingSprite)
+import {FormattedMessage} from 'react-intl'
 export default class TilingSpriteExample extends React.Component {
   render() {
     return (
@@ -16,7 +15,7 @@ export default class TilingSpriteExample extends React.Component {
           </Stage>
         </Game>
         <Jumbotron className="m-w-800px">
-          <p className="text-muted">The tiling sprite allows you to create backgrounds from a single sprite.</p>
+          <p className="text-muted"><FormattedMessage id="tilingsprite.line_1" /></p>
           <pre className="font-weight-500">
             <code className="text-orange">import</code>{" "}
             <code>{"{Game, Stage, ResourceProvider, TilingSprite}"}</code>{" "}

@@ -2,6 +2,7 @@ import React from 'react'
 import {Game, Stage, ResourceProvider, Sprite, TickEvent} from 'react-pixi-game'
 import {Jumbotron} from 'reactstrap'
 import {Vector} from 'vangogh500-physics'
+import {FormattedMessage} from 'react-intl'
 
 type StateTypes = {
   rotation: Vector
@@ -28,8 +29,8 @@ export default class AnimationExample extends React.Component<void,void,StateTyp
           </Stage>
         </Game>
         <Jumbotron className="m-w-800px">
-          <p className="text-muted">You can automatically access the game loop using the tick event component and passing a custom callback. Ticks are generated at around 30FPS and can be modified. Make sure you pass a reference to a function. It will be needed later for identification when the function is unhooked from the event listener.</p>
-          <p className="text-muted">This paradigm is an inspiration from the react-game-kit library.</p>
+          <p className="text-muted"><FormattedMessage id="animations.line_1" /></p>
+          <p className="text-muted"><FormattedMessage id="animations.line_2" /></p>
           <pre className="font-weight-500">
             <code className="text-orange">import</code>{" "}
             <code>{"{Game, Stage, ResourceProvider, Sprite, TickEvent}"}</code>{" "}

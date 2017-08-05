@@ -1,13 +1,78 @@
 {
+  "sidenav": {
+    "section_1": {
+      "title": "Basics",
+      "boilerplate": "Boilerplate",
+      "geometry": "Drawing Geometry",
+      "sprites": "Sprites",
+      "animations": "Animations",
+      "animatedsprite": "Animated Sprite",
+      "tilingsprite": "Tiling Sprite"
+    },
+    "section_2": {
+      "title": "Filter",
+      "blur": "Blur",
+      "displacement": "Displacement",
+      "animating": "Animating Filters"
+    },
+    "section_3": {
+      "title": "User Interaction",
+      "mouse": "Mouse Event",
+      "keyboard": "Keyboard Event"
+    }
+  },
   "home": {
     "title": "Welcome to RPG",
     "subtitle": "By Vangogh500 (Kai Matsuda)",
     "subtext": "A new way to code web applications using Pixi.js and Facebook's React.",
     "section_1": {
+      "main_title": "Why use RPG?",
       "title_1": "Harness the power of WebGL:",
       "text_1": "Take advantage of the client's gpu, allowing for a more extensive and complex app with minimal performance costs. Using both the cpu and gpu will give your apps the power it deserves.",
       "title_2": "Take advantage of the modularity and simplicity of react:",
       "text_2": "Facebook's react is becoming one of the web's most popular frameworks. Encapsulating pixi with React allows for readable and reusable code for WebGL. It also allows for the integration of the visuals with the redux system."
+    },
+    "section_2": {
+      "title": "Dependencies",
+      "subtext": "This project is in works with vangogh500-physics a concurrent physics engine utilizing akka's concurrency model."
+    },
+    "section_3": {
+      "title": "Installation",
+      "subtext_1": "RPG is currently available on npm.",
+      "subtext_2": "To add it as a dependency to your project, simply run: "
+    },
+    "section_4": {
+      "title": "Dev log:"
+    },
+    "notes": {
+      "version": "RPG is currently in beta version 0.0.9.",
+      "migration": "Migrating to scala.js to take advantage of both the language features/performance advantages of scala and akka' concurrency model, which allows for multiprocesses on the browser.",
+      "contribution": {
+        "text": "Feel free to message me on my Github if you would like to contribute.",
+        "link": "Link here."
+      }
     }
+  },
+  "boilerplate": {
+    "line_1": "A pixi app is initialized using the game component. Game loop is supplied here.",
+    "line_2": "The stage component creates the canvas and renderer for your app to use to display content. Thanks to Pixi.js, RPG will default to a basic HTML canvas if WebGL is not supported by the browser.",
+    "line_3": "The world (not yet implemented) provides physics for the bodies within it."
+  },
+  "geometry": {
+    "line_1": "RPG comes with 2 basic geometric shapes to draw primitives."
+  },
+  "sprites": {
+    "line_1": "Sprites can be created by an url. However it is recommended to use resource provider to preload the assets for performance reasons.",
+    "line_2": "In this example we provide the loader with a texture atlas of a sprite sheet (a sprite sheet is more efficient than loading in your assets seperately). The loader will refrain from rendering until all resources are loaded."
+  },
+  "animations": {
+    "line_1": "You can automatically access the game loop using the tick event component and passing a custom callback. Ticks are generated at around 30FPS and can be modified. Make sure you pass a reference to a function. It will be needed later for identification when the function is unhooked from the event listener.",
+    "line_2": "This paradigm is an inspiration from the react-game-kit library."
+  },
+  "animatedsprite": {
+    "line_1": "RPG also comes with an extension of Pixi's animated sprite, which allows for easy sprite animations."
+  },
+  "tilingsprite": {
+    "line_1": "The tiling sprite allows you to create backgrounds from a single sprite."
   }
 }

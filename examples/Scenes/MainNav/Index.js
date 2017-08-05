@@ -59,10 +59,10 @@ class MainNav extends React.Component<void,PropTypes,State> {
                 </DropdownToggle>
                 <DropdownMenu className="dropdown-menu-right">
                   <DropdownItem>
-                    <NavLink tag={LocaleButton} to='ja'><span className="flag-icon flag-icon-jp"></span></NavLink>
+                    <NavLink tag={LocaleButton} to='ja'><span className="flag-icon flag-icon-jp"></span>　日本語</NavLink>
                   </DropdownItem>
                   <DropdownItem>
-                    <NavLink tag={LocaleButton} to="en"><span className="flag-icon flag-icon-gb"></span></NavLink>
+                    <NavLink tag={LocaleButton} to="en"><span className="flag-icon flag-icon-gb"></span>　English</NavLink>
                   </DropdownItem>
                 </DropdownMenu>
               </Dropdown>

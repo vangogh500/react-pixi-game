@@ -2,6 +2,7 @@ import React from 'react'
 import {Game, Stage, ResourceProvider, Sprite} from 'react-pixi-game'
 import {Vector} from 'vangogh500-physics'
 import {Jumbotron} from 'reactstrap'
+import {FormattedMessage} from 'react-intl'
 
 export default class SpriteExample extends React.Component {
   render() {
@@ -15,8 +16,8 @@ export default class SpriteExample extends React.Component {
           </Stage>
         </Game>
         <Jumbotron className="m-w-800px">
-          <p className="text-muted">Sprites can be created by an url. However it is recommended to use resource provider to preload the assets for performance reasons.</p>
-          <p className="text-muted">In this example we provide the loader with a texture atlas of a sprite sheet (a sprite sheet is more efficient than loading in your assets seperately). The loader will refrain from rendering until all resources are loaded.</p>
+          <p className="text-muted"><FormattedMessage id="sprites.line_1" /></p>
+          <p className="text-muted"><FormattedMessage id="sprites.line_2" /></p>
           <pre className="font-weight-500">
             <code className="text-orange">import</code>{" "}
             <code>{"{Game, Stage, ResourceProvider, Sprite}"}</code>{" "}
