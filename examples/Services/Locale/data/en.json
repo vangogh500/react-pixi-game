@@ -1,0 +1,13 @@
+{
+  "home": {
+    "title": "Welcome to RPG",
+    "subtitle": "By Vangogh500 (Kai Matsuda)",
+    "subtext": "A new way to code web applications using Pixi.js and Facebook's React.",
+    "section_1": {
+      "title_1": "Harness the power of WebGL:",
+      "text_1": "Take advantage of the client's gpu, allowing for a more extensive and complex app with minimal performance costs. Using both the cpu and gpu will give your apps the power it deserves.",
+      "title_2": "Take advantage of the modularity and simplicity of react:",
+      "text_2": "Facebook's react is becoming one of the web's most popular frameworks. Encapsulating pixi with React allows for readable and reusable code for WebGL. It also allows for the integration of the visuals with the redux system."
+    }
+  }
+}

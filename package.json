@@ -6,7 +6,7 @@
   "scripts": {
     "build": "./node_modules/.bin/webpack",
     "watch": "./node_modules/.bin/webpack --watch",
-    "serve": "./node_modules/.bin/webpack-dev-server --content-base build/",
+    "serve": "./node_modules/.bin/webpack-dev-server --content-base",
     "test": "jest",
     "doc": "jsdoc src -c jsdoc.config.json -r --debug -d docs"
   },
@@ -47,7 +47,7 @@
     "react-addons-transition-group": "^15.6.0",
     "react-dom": "^15.5.3",
     "react-intl": "^2.3.0",
-    "react-pixi-game": "0.0.5",
+    "react-pixi-game": "0.0.8",
     "react-prism": "^4.3.0",
     "react-redux": "^5.0.5",
     "react-router": "^4.1.1",

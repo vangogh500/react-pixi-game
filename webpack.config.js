@@ -7,9 +7,9 @@
  */
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './examples/index.js',
   output: {
-    path: __dirname +'/build/js',
+    path: __dirname +'/js',
     publicPath: '/js/',
     filename: 'index.js'
   },

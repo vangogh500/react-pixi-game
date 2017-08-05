@@ -1,0 +1,55 @@
+$light-grey: #FAFAFA;
+$orange: #E57908;
+$green: #06AD2B;
+$red: #E50808;
+
+.text-orange {
+  color: $orange;
+}
+.text-green {
+  color: $green;
+}
+.text-red {
+  color: $red;
+}
+
+.text-black {
+  color: black;
+}
+.black {
+  background-color: black !important;
+}
+.white {
+  background-color: white !important;
+}
+.text-white {
+  color: white !important;
+}
+.filter-greyscale {
+  filter: grayscale(0.4);
+}
+
+.blue-grey {
+  &.darken-4 {
+    background: #263238
+  }
+}
+
+.grey {
+  &.darken-4 {
+    background: #212121
+  }
+}
+
+a.text-grey {
+  &.lighten-1 {
+    color: #bdbdbd !important;
+    transition: color 0.2s ease-in-out;
+    &:hover {
+      color: #FFF !important;
+    }
+  }
+  &.lighten-3 {
+    color: #eeeeee !important
+  }
+}
