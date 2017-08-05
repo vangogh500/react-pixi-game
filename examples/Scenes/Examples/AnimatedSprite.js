@@ -9,7 +9,7 @@ export default class AnimatedSpriteExample extends React.Component {
       <div>
         <Game>
           <Stage>
-            <ResourceProvider resources={[['example', '/assets/spritesheet.json']]}>
+            <ResourceProvider resources={[['example', './assets/spritesheet.json']]}>
               <AnimatedSprite animationSpeed={0.03} position={new Vector(400,300)} anchor={new Vector(0.5,0.5)} textures={[['example', 'girl_1.png'], ['example', 'girl_2.png']]} />
             </ResourceProvider>
           </Stage>

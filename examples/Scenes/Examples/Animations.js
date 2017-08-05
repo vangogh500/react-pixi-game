@@ -19,7 +19,7 @@ export default class AnimationExample extends React.Component<void,void,StateTyp
       <div>
         <Game>
           <Stage>
-            <ResourceProvider resources={[['example', '/assets/spritesheet.json']]}>
+            <ResourceProvider resources={[['example', './assets/spritesheet.json']]}>
               {
               <Sprite rotation={this.state.rotation} anchor={new Vector(0.5,0.5)} texture={['example', 'girl_1.png']} position={new Vector(400,300)}  />
               }

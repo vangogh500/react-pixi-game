@@ -10,7 +10,7 @@ export default class TilingSpriteExample extends React.Component {
       <div>
         <Game>
           <Stage>
-            <ResourceProvider resources={[['example', '/assets/spritesheet.json']]}>
+            <ResourceProvider resources={[['example', './assets/spritesheet.json']]}>
               <TilingSprite size={new Vector(600,600)} texture={['example', 'grass.png']} />
             </ResourceProvider>
           </Stage>

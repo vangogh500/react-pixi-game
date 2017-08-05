@@ -9,7 +9,7 @@ export default class SpriteExample extends React.Component {
       <div>
         <Game>
           <Stage>
-            <ResourceProvider resources={[['example', '/assets/spritesheet.json']]}>
+            <ResourceProvider resources={[['example', './assets/spritesheet.json']]}>
               <Sprite position={new Vector(100,100)} texture={['example', 'girl_1.png']} />
             </ResourceProvider>
           </Stage>
