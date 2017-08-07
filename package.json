@@ -1,0 +1,54 @@
+{
+  "name": "react-pixi-game",
+  "version": "0.0.5",
+  "description": "Create a game using react and pixi",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "karma start",
+    "build": "./node_modules/.bin/webpack",
+    "doc": "documentation build src/** -f html -o docs",
+    "serve-examples": "./node_modules/.bin/webpack-dev-server --config examples.webpack.js --content-base examples/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vangogh500/react-pixi-game.git"
+  },
+  "author": "Vangogh500 (Kai Matsuda)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vangogh500/react-pixi-game/issues"
+  },
+  "homepage": "https://github.com/vangogh500/react-pixi-game#readme",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-jest": "^20.0.3",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-flow-runtime": "^0.11.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "flow-bin": "^0.51.1",
+    "flow-runtime": "^0.14.0",
+    "jasmine": "^2.7.0",
+    "karma": "^1.7.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^2.0.4",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-test-renderer": "^15.6.1",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.5.0"
+  },
+  "dependencies": {
+    "pixi.js": "^4.5.4",
+    "vangogh500-physics": "0.0.2"
+  },
+  "peerDependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
+}

@@ -1,0 +1,96 @@
+[0m[[0minfo[0m] [0mBundling the application with its NPM dependencies[0m
+[0m[[0minfo[0m] [0mHash: 4a14c82317bf4c7db65d[0m
+[0m[[0minfo[0m] [0mVersion: webpack 1.14.0[0m
+[0m[[0minfo[0m] [0mTime: 6244ms[0m
+[0m[[0minfo[0m] [0m                                Asset     Size  Chunks             Chunk Names[0m
+[0m[[0minfo[0m] [0m    react-pixi-game-fastopt-bundle.js   1.4 MB       0  [emitted]  react-pixi-game-fastopt[0m
+[0m[[0minfo[0m] [0mreact-pixi-game-fastopt-bundle.js.map  1.79 MB       0  [emitted]  react-pixi-game-fastopt[0m
+[0m[[0minfo[0m] [0m   [0] multi react-pixi-game-fastopt 28 bytes {0} [built][0m
+[0m[[0minfo[0m] [0m    + 190 hidden modules[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mWARNING in ./react-pixi-game-fastopt.js[0m
+[0m[[0minfo[0m] [0mCannot find source file 'https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/tools/scalajsenv.js': Error: Cannot resolve 'file' or 'directory' ./https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/tools/scalajsenv.js in C:\Users\KLD\repos\react-pixi-game\target\scala-2.12\scalajs-bundler\main[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mWARNING in ./react-pixi-game-fastopt.js[0m
+[0m[[0minfo[0m] [0mCannot find source file 'https://raw.githubusercontent.com/scala/scala/v2.12.2/src/library/scala/Function1.scala': Error: Cannot resolve 'file' or 'directory' ./https://raw.githubusercontent.com/scala/scala/v2.12.2/src/library/scala/Function1.scala in C:\Users\KLD\repos\react-pixi-game\target\scala-2.12\scalajs-bundler\main[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mWARNING in ./react-pixi-game-fastopt.js[0m
+[0m[[0minfo[0m] [0mCannot find source file 'https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/library/src/main/scala/scala/scalajs/js/JSNumberOps.scala': Error: Cannot resolve 'file' or 'directory' ./https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/library/src/main/scala/scala/scalajs/js/JSNumberOps.scala in C:\Users\KLD\repos\react-pixi-game\target\scala-2.12\scalajs-bundler\main[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mWARNING in ./react-pixi-game-fastopt.js[0m
+[0m[[0minfo[0m] [0mCannot find source file 'https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/javalanglib/src/main/scala/java/lang/Integer.scala': Error: Cannot resolve 'file' or 'directory' ./https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/javalanglib/src/main/scala/java/lang/Integer.scala in C:\Users\KLD\repos\react-pixi-game\target\scala-2.12\scalajs-bundler\main[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mWARNING in ./react-pixi-game-fastopt.js[0m
+[0m[[0minfo[0m] [0mCannot find source file 'https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/javalanglib/src/main/scala/java/lang/Class.scala': Error: Cannot resolve 'file' or 'directory' ./https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/javalanglib/src/main/scala/java/lang/Class.scala in C:\Users\KLD\repos\react-pixi-game\target\scala-2.12\scalajs-bundler\main[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mWARNING in ./react-pixi-game-fastopt.js[0m
+[0m[[0minfo[0m] [0mCannot find source file 'https://raw.githubusercontent.com/scala/scala/v2.12.2/src/library/scala/util/hashing/MurmurHash3.scala': Error: Cannot resolve 'file' or 'directory' ./https://raw.githubusercontent.com/scala/scala/v2.12.2/src/library/scala/util/hashing/MurmurHash3.scala in C:\Users\KLD\repos\react-pixi-game\target\scala-2.12\scalajs-bundler\main[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mWARNING in ./react-pixi-game-fastopt.js[0m
+[0m[[0minfo[0m] [0mCannot find source file 'https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/library/src/main/scala/scala/scalajs/runtime/Bits.scala': Error: Cannot resolve 'file' or 'directory' ./https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/library/src/main/scala/scala/scalajs/runtime/Bits.scala in C:\Users\KLD\repos\react-pixi-game\target\scala-2.12\scalajs-bundler\main[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mWARNING in ./react-pixi-game-fastopt.js[0m
+[0m[[0minfo[0m] [0mCannot find source file 'https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/library/src/main/scala/scala/scalajs/js/Dynamic.scala': Error: Cannot resolve 'file' or 'directory' ./https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/library/src/main/scala/scala/scalajs/js/Dynamic.scala in C:\Users\KLD\repos\react-pixi-game\target\scala-2.12\scalajs-bundler\main[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mWARNING in ./react-pixi-game-fastopt.js[0m
+[0m[[0minfo[0m] [0mCannot find source file 'https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/library/src/main/scala/scala/scalajs/js/DynamicImplicits.scala': Error: Cannot resolve 'file' or 'directory' ./https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/library/src/main/scala/scala/scalajs/js/DynamicImplicits.scala in C:\Users\KLD\repos\react-pixi-game\target\scala-2.12\scalajs-bundler\main[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mWARNING in ./react-pixi-game-fastopt.js[0m
+[0m[[0minfo[0m] [0mCannot find source file 'https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/library/src/main/scala/scala/scalajs/runtime/RuntimeLong.scala': Error: Cannot resolve 'file' or 'directory' ./https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/library/src/main/scala/scala/scalajs/runtime/RuntimeLong.scala in C:\Users\KLD\repos\react-pixi-game\target\scala-2.12\scalajs-bundler\main[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mWARNING in ./react-pixi-game-fastopt.js[0m
+[0m[[0minfo[0m] [0mCannot find source file 'https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/javalanglib/src/main/scala/java/lang/Double.scala': Error: Cannot resolve 'file' or 'directory' ./https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/javalanglib/src/main/scala/java/lang/Double.scala in C:\Users\KLD\repos\react-pixi-game\target\scala-2.12\scalajs-bundler\main[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mWARNING in ./react-pixi-game-fastopt.js[0m
+[0m[[0minfo[0m] [0mCannot find source file 'https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/javalanglib/src/main/scala/java/lang/Math.scala': Error: Cannot resolve 'file' or 'directory' ./https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/javalanglib/src/main/scala/java/lang/Math.scala in C:\Users\KLD\repos\react-pixi-game\target\scala-2.12\scalajs-bundler\main[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mWARNING in ./react-pixi-game-fastopt.js[0m
+[0m[[0minfo[0m] [0mCannot find source file 'https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/library/src/main/scala/scala/scalajs/runtime/RuntimeString.scala': Error: Cannot resolve 'file' or 'directory' ./https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/library/src/main/scala/scala/scalajs/runtime/RuntimeString.scala in C:\Users\KLD\repos\react-pixi-game\target\scala-2.12\scalajs-bundler\main[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mWARNING in ./react-pixi-game-fastopt.js[0m
+[0m[[0minfo[0m] [0mCannot find source file 'https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/library/src/main/scala/scala/scalajs/runtime/package.scala': Error: Cannot resolve 'file' or 'directory' ./https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/library/src/main/scala/scala/scalajs/runtime/package.scala in C:\Users\KLD\repos\react-pixi-game\target\scala-2.12\scalajs-bundler\main[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mWARNING in ./react-pixi-game-fastopt.js[0m
+[0m[[0minfo[0m] [0mCannot find source file 'https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/library/src/main/scala/scala/scalajs/js/JavaScriptException.scala': Error: Cannot resolve 'file' or 'directory' ./https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/library/src/main/scala/scala/scalajs/js/JavaScriptException.scala in C:\Users\KLD\repos\react-pixi-game\target\scala-2.12\scalajs-bundler\main[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mWARNING in ./react-pixi-game-fastopt.js[0m
+[0m[[0minfo[0m] [0mCannot find source file 'https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/library-aux/src/main/scala/scala/runtime/Statics.scala': Error: Cannot resolve 'file' or 'directory' ./https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/library-aux/src/main/scala/scala/runtime/Statics.scala in C:\Users\KLD\repos\react-pixi-game\target\scala-2.12\scalajs-bundler\main[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mWARNING in ./react-pixi-game-fastopt.js[0m
+[0m[[0minfo[0m] [0mCannot find source file 'https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/javalanglib/src/main/scala/java/lang/Number.scala': Error: Cannot resolve 'file' or 'directory' ./https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/javalanglib/src/main/scala/java/lang/Number.scala in C:\Users\KLD\repos\react-pixi-game\target\scala-2.12\scalajs-bundler\main[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mWARNING in ./react-pixi-game-fastopt.js[0m
+[0m[[0minfo[0m] [0mCannot find source file 'https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/javalanglib/src/main/scala/java/lang/Throwables.scala': Error: Cannot resolve 'file' or 'directory' ./https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/javalanglib/src/main/scala/java/lang/Throwables.scala in C:\Users\KLD\repos\react-pixi-game\target\scala-2.12\scalajs-bundler\main[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mWARNING in ./react-pixi-game-fastopt.js[0m
+[0m[[0minfo[0m] [0mCannot find source file 'https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/library/src/main/scala/scala/scalajs/runtime/StackTrace.scala': Error: Cannot resolve 'file' or 'directory' ./https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/library/src/main/scala/scala/scalajs/runtime/StackTrace.scala in C:\Users\KLD\repos\react-pixi-game\target\scala-2.12\scalajs-bundler\main[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mWARNING in ./react-pixi-game-fastopt.js[0m
+[0m[[0minfo[0m] [0mCannot find source file 'https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/library/src/main/scala/scala/scalajs/js/package.scala': Error: Cannot resolve 'file' or 'directory' ./https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/library/src/main/scala/scala/scalajs/js/package.scala in C:\Users\KLD\repos\react-pixi-game\target\scala-2.12\scalajs-bundler\main[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mWARNING in ./react-pixi-game-fastopt.js[0m
+[0m[[0minfo[0m] [0mCannot find source file 'https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/library-aux/src/main/scala/scala/runtime/BoxedUnit.scala': Error: Cannot resolve 'file' or 'directory' ./https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/library-aux/src/main/scala/scala/runtime/BoxedUnit.scala in C:\Users\KLD\repos\react-pixi-game\target\scala-2.12\scalajs-bundler\main[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mWARNING in ./react-pixi-game-fastopt.js[0m
+[0m[[0minfo[0m] [0mCannot find source file 'https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/javalanglib/src/main/scala/java/lang/Boolean.scala': Error: Cannot resolve 'file' or 'directory' ./https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/javalanglib/src/main/scala/java/lang/Boolean.scala in C:\Users\KLD\repos\react-pixi-game\target\scala-2.12\scalajs-bundler\main[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mWARNING in ./react-pixi-game-fastopt.js[0m
+[0m[[0minfo[0m] [0mCannot find source file 'https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/library/src/main/scala/scala/scalajs/js/Union.scala': Error: Cannot resolve 'file' or 'directory' ./https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/library/src/main/scala/scala/scalajs/js/Union.scala in C:\Users\KLD\repos\react-pixi-game\target\scala-2.12\scalajs-bundler\main[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mWARNING in ./react-pixi-game-fastopt.js[0m
+[0m[[0minfo[0m] [0mCannot find source file 'https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/javalanglib/src/main/scala/java/lang/Byte.scala': Error: Cannot resolve 'file' or 'directory' ./https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/javalanglib/src/main/scala/java/lang/Byte.scala in C:\Users\KLD\repos\react-pixi-game\target\scala-2.12\scalajs-bundler\main[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mWARNING in ./react-pixi-game-fastopt.js[0m
+[0m[[0minfo[0m] [0mCannot find source file 'https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/javalanglib/src/main/scala/java/lang/Float.scala': Error: Cannot resolve 'file' or 'directory' ./https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/javalanglib/src/main/scala/java/lang/Float.scala in C:\Users\KLD\repos\react-pixi-game\target\scala-2.12\scalajs-bundler\main[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mWARNING in ./react-pixi-game-fastopt.js[0m
+[0m[[0minfo[0m] [0mCannot find source file 'https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/javalanglib/src/main/scala/java/lang/Long.scala': Error: Cannot resolve 'file' or 'directory' ./https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/javalanglib/src/main/scala/java/lang/Long.scala in C:\Users\KLD\repos\react-pixi-game\target\scala-2.12\scalajs-bundler\main[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mWARNING in ./react-pixi-game-fastopt.js[0m
+[0m[[0minfo[0m] [0mCannot find source file 'https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/javalanglib/src/main/scala/java/lang/Short.scala': Error: Cannot resolve 'file' or 'directory' ./https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/javalanglib/src/main/scala/java/lang/Short.scala in C:\Users\KLD\repos\react-pixi-game\target\scala-2.12\scalajs-bundler\main[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mWARNING in ./react-pixi-game-fastopt.js[0m
+[0m[[0minfo[0m] [0mCannot find source file 'https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/library/src/main/scala/scala/scalajs/runtime/UndefinedBehaviorError.scala': Error: Cannot resolve 'file' or 'directory' ./https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/library/src/main/scala/scala/scalajs/runtime/UndefinedBehaviorError.scala in C:\Users\KLD\repos\react-pixi-game\target\scala-2.12\scalajs-bundler\main[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mWARNING in ./react-pixi-game-fastopt.js[0m
+[0m[[0minfo[0m] [0mCannot find source file 'https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/scalalib/overrides/scala/runtime/ScalaRunTime.scala': Error: Cannot resolve 'file' or 'directory' ./https://raw.githubusercontent.com/scala-js/scala-js/v0.6.19/scalalib/overrides/scala/runtime/ScalaRunTime.scala in C:\Users\KLD\repos\react-pixi-game\target\scala-2.12\scalajs-bundler\main[0m

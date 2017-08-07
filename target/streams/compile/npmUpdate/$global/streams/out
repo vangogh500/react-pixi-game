@@ -1,0 +1,9 @@
+[0m[[0minfo[0m] [0mUpdating NPM dependencies[0m
+[0m[[0minfo[0m] [0mC:\Users\KLD\repos\react-pixi-game\target\scala-2.12\scalajs-bundler\main[0m
+[0m[[0minfo[0m] [0m`-- pixi.js@4.5.4 [0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[31merror[0m] [0mnpm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.0.0 (node_modules\chokidar\node_modules\fsevents):[0m
+[0m[[31merror[0m] [0mnpm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})[0m
+[0m[[31merror[0m] [0mnpm WARN main No description[0m
+[0m[[31merror[0m] [0mnpm WARN main No repository field.[0m
+[0m[[31merror[0m] [0mnpm WARN main No license field.[0m
