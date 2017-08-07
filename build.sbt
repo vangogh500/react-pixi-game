@@ -4,9 +4,7 @@ scalaJSModuleKind := ModuleKind.CommonJSModule
 
 libraryDependencies += "com.github.japgolly.scalajs-react" %%% "core" % "1.1.0"
 
-npmDependencies in Compile ++= Seq(
-    "react" -> "15.6.1",
-    "react-dom" -> "15.6.1")
+npmDependencies in Compile ++= Seq("pixi.js" -> "^4.5.4")
 
 name := "react-pixi-game"
 organization := "vangogh500"
