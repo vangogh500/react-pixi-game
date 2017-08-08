@@ -9,8 +9,8 @@ import NonDom from '../mixins/NonDom.js'
 import {withContext} from '../hocs.js'
 
 /**
- * @memberof TickEvent
- * @prop {function(delta: number): void} onTick Call back to call for on a pointer down event. Event is passed to the call back.
+ * @memberof PointerEvent
+ * @prop {function(delta: number): void} onPointerDown Call back to call for on a pointer down event. Event is passed to the call back.
  */
 type PropTypes = {
   container: PIXIContainer,
