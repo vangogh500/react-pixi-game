@@ -10,12 +10,15 @@ import Graphical from '../mixins/Graphical.js'
 import Mounted from '../mixins/Mounted.js'
 
 /**
- * Provides a circle graphic.
+ * Provides a circle graphic. Inherits props from Graphical mixin.
  * @example
  *
  * <Circle position={new Vector()} color={0xFFF888} rotation={new Vector(0,0,Math.PI)} />
  */
 class Circle extends mix(React.Component).with(Graphical) {
+  /**
+   * Draws a circle on the container.
+   */
   drawGraphics() {
     const {graphics} = this.state
     const {color, alpha, position, size, rotation} = this.props
@@ -28,6 +31,9 @@ class Circle extends mix(React.Component).with(Graphical) {
     graphics.endFill()
   }
 
+  /**
+   * Updates the circle graphic using props.
+   */
   updateGraphics() {
     const {graphics} = this.state
     const {color, alpha, position, size, rotation} = this.props

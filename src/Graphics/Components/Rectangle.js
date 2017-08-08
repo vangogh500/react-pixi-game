@@ -10,12 +10,15 @@ import Graphical from '../mixins/Graphical.js'
 import Mounted from '../mixins/Mounted.js'
 
 /**
- * Provides a circle graphic.
+ * Provides a rectangle graphic. Inherits props from Graphical mixin.
  * @example
  *
  * <Rectangle position={new Vector()} color={0xFFF888} rotation={new Vector(0,0,Math.PI)} />
  */
 class Rectangle extends mix(React.Component).with(Graphical) {
+  /**
+   * Draws the rectangle on the container.
+   */
   drawGraphics() {
     const {graphics} = this.state
     const {color, alpha, position, size, rotation} = this.props
@@ -27,6 +30,9 @@ class Rectangle extends mix(React.Component).with(Graphical) {
     graphics.rotation = rotation.z
     graphics.endFill()
   }
+  /**
+   * Updates rectangle graphic using props.
+   */
   updateGraphics() {
     const {graphics} = this.state
     const {color, alpha, position, size, rotation} = this.props

@@ -12,8 +12,10 @@ import {Vector} from 'vangogh500-physics'
 import {withContext} from '../../hocs.js'
 
 /**
- * Prop types.
+ * Prop types. Inherits props from DisplayObject mixin.
  * @memberof AnimatedSprite
+ * @prop {Array<string | [string,string]>} res Resources for creating the frames. Can be an array of urls or array of strings/tuples ref resources from the resource provider.
+ * @prop {number} animationSpeed Speed of animation between frames. Defaults to 1.
  */
 type PropTypes = {
   res: Array<string | [string,string]>,
@@ -48,7 +50,6 @@ class AnimatedSprite extends mix(React.Component).with(SpriteMixin) {
 
   /**
    * Updates the sprite.
-   * @memberof AnimatedSprite
    */
   update(props: PropTypes) {
     super.update(props)
@@ -57,7 +58,6 @@ class AnimatedSprite extends mix(React.Component).with(SpriteMixin) {
 
   /**
    * Mounts the component. Subsribes to the game loop.
-   * @memberof AnimatedSprite
    */
   componentDidMount() {
     const {displayObject} = this.state
@@ -66,8 +66,7 @@ class AnimatedSprite extends mix(React.Component).with(SpriteMixin) {
   }
   /**
    * Unmounts the component. Unsubscribes from the game loop.
-   * @memberof AnimatedSprite
-   */
+\   */
   componentWillUnmount() {
     const {displayObject} = this.state
     this.props.loop.remove(displayObject.update)
@@ -76,7 +75,6 @@ class AnimatedSprite extends mix(React.Component).with(SpriteMixin) {
 
   /**
    * Creates an instance of Animated Sprite using props.
-   * @memberof AnimatedSprite
    * @param {PropTypes} props
    */
   createSpriteWithProps(props: PropTypes): extras.AnimatedSprite {

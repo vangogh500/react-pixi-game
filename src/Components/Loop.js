@@ -23,18 +23,14 @@ export default class Loop extends mix(React.Component).with(PropBasedUpdate, Pur
   /**
    * Prop types
    * @memberof Loop
+   * @prop {number} fpsCap Used to cap fps. Defaults to 30.
    */
   props: {
-    scale: number,
     fpsCap: number
   }
   static defaultProps = {
     fpsCap: 30
   }
-  /**
-   * State types
-   * @memberof Loop
-   */
   state: {
     loop: ticker.Ticker
   }
@@ -49,15 +45,14 @@ export default class Loop extends mix(React.Component).with(PropBasedUpdate, Pur
   }
 
   /**
-   * Life cycle hook for mounting.
-   * @memberof Loop
+   * Life cycle hook for mounting. Starts the loop once it is mounted.
    */
   componentDidMount() {
     this.state.loop.start()
   }
 
   /**
-   * Life cycle hook for mounting.
+   * Life cycle hook for mounting. Stops the game loop.
    */
   componentWillUnmount() {
     this.state.loop.stop()

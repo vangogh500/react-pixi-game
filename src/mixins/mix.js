@@ -2,6 +2,7 @@
 
 /**
  * Creates a mixin base from which the class can be mixed.
+ * @alias mix
  * @param {Class} baseclass
  * @returns {MixinBase}
  */

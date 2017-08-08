@@ -18,7 +18,8 @@ type PropTypes = {
 }
 
 /**
- * Mixin function for components that should only update on prop changes.
+ * Mixin function for components that is a Graphic.
+ * @alias Graphical
  * @param {Class} superclass
  */
 const mixin = <PropType: PropTypes>(superclass: Class<any>) => class extends mix(superclass).with(PropBasedUpdate, Mounted('graphics')) {

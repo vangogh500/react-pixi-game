@@ -6,8 +6,10 @@ import {contextProvider} from '../hocs.js'
 import {deepCompareArray} from '../utils.js'
 
 /**
+ * Prop Types
  * @memberof ResourceLoader
- * @prop {Array<[string,string]>} res Resources in tuple form [name, path].
+ * @prop {Array.<[string,string]>} resources Array of resources in tuple form: [name, path]. Defaults to an empty array.
+ * @prop {?React.Children} children JSX children. Resources once loaded will be passed to them via context.
  */
 type PropTypes = {
   resources: Array<[string,string]>,
@@ -18,10 +20,6 @@ type DefaultPropTypes = {
   resources: Array<[string,string]>
 }
 
-/**
- * State Types
- * @memberof ResourceLoader
- */
 type StateTypes = {
   loaded: boolean,
   loader: loaders.Loader
@@ -43,19 +41,13 @@ const Provider = contextProvider({ resources: ReactPropTypes.object.isRequired }
  */
 export default class ResourceLoader extends React.PureComponent<DefaultPropTypes,PropTypes,*>  {
   state: StateTypes
-  /**
-   * Default props.
-   * @memberof ResourceLoader
-   * @prop {Array<[string,string]>} defaultProps Defaults to an empty array.
-   */
+
   static defaultProps = {
     resources: []
   }
   /**
-   * Creates a loader configured by the resources.
+   * Creates an instance of loader configured with the resources.
    * @memberof ResourceLoader
-   * @method
-   * @static
    * @alias createLoaderFromResources
    * @param {Array<[string,string]>} resources
    * @returns {PIXI.loaders.Loader}
@@ -77,10 +69,7 @@ export default class ResourceLoader extends React.PureComponent<DefaultPropTypes
   }
 
   /**
-   * Life cycle hook for mounting. Loads the resources.
-   * @memberof ResourceLoader
-   * @method
-   * @instance
+   * Life cycle hook for mounting. Loads resources before children are rendered.
    */
   componentDidMount(): void {
     console.log("Resource mount")
@@ -94,11 +83,7 @@ export default class ResourceLoader extends React.PureComponent<DefaultPropTypes
   }
 
   /**
-   * Life cycle hook for mounting. Loads the resources.
-   * @memberof ResourceLoader
-   * @method
-   * @instance
-   * @prop {PropTypes} nextProps
+   * Handles props. If resources are different, the loader will load again.
    */
   componentWillReceiveProps(nextProps: PropTypes): void {
     if(!deepCompareArray(this.props.resources, nextProps.resources)) {
@@ -109,11 +94,7 @@ export default class ResourceLoader extends React.PureComponent<DefaultPropTypes
   }
 
   /**
-   * Renders react element.
-   * @memberof ResourceLoader
-   * @method
-   * @instance
-   * @alias render
+   * Renders react element. Will render null until resources are loaded.
    */
   render(): ?React.Element<*> {
     const {children} = this.props

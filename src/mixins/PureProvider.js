@@ -4,6 +4,7 @@ import {contextProvider} from '../hocs.js'
 
 /**
  * Mixin functions for components that renders only to provide.
+ * @alias PureProvider
  * @param {Class} superclass
  * @param {object} childContextTypes
  * @flow

@@ -3,6 +3,7 @@ import {shallowCompare} from '../utils.js'
 
 /**
  * Mixin function for components that have pure updates.
+ * @alias PurePropUpdate
  * @param {Class} superclass
  */
 const mixin = <PropType: {}>(target: string) => (superclass: Class<any>) => class extends superclass {

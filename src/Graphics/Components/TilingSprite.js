@@ -11,8 +11,10 @@ import {Vector} from 'vangogh500-physics'
 import {withContext} from '../../hocs.js'
 
 /**
- * Prop types.
- * @memberof AnimatedSprite
+ * Prop types. Inherits props from DisplayObject mixin.
+ * @memberof TilingSprite
+ * @prop {string | [string,string]} res Resource to create sprite. Can be an url or a reference to a resource from resource provider.
+ * @prop {Vector} size Size of the sprite.
  */
 type PropTypes = {
   res: string | [string,string],
@@ -25,14 +27,14 @@ type PropTypes = {
  * Provides a tiling sprite component.
  * @example
  *
- * <ResourceProvider resources={[['mario', '/img/mario.png'], ['mario2', '/img/mario2.png']]}>
+ * <ResourceProvider resources={[['grass', '/img/grass.png']]}>
  *  <Stage autoResize={true}>
- *   <AnimatedSprite resource={['mario', 'mario2']} />
+ *   <TilingSprite resource={'grass'} />
  *  </Stage>
  * </ResourceProvider>
  *
  */
-class AnimatedSprite extends mix(React.Component).with(SpriteMixin) {
+class TilingSprite extends mix(React.Component).with(SpriteMixin) {
   static defaultProps = {
     position: new Vector(),
     anchor: new Vector(0.5,0.5),
@@ -45,7 +47,6 @@ class AnimatedSprite extends mix(React.Component).with(SpriteMixin) {
 
   /**
    * Updates the sprite.
-   * @memberof TilingSprite
    */
   update(props: PropTypes) {
     super.update(props)
@@ -57,7 +58,6 @@ class AnimatedSprite extends mix(React.Component).with(SpriteMixin) {
 
   /**
    * Creates an instance of tiling sprite.
-   * @memberof TilingSprite
    */
   createSpriteWithProps(props: PropTypes): extras.AnimatedSprite {
     const {resources, res} = props
@@ -81,4 +81,4 @@ const contextTypes = {
   loop: ReactPropTypes.object.isRequired
 }
 
-export default withContext(contextTypes)(AnimatedSprite)
+export default withContext(contextTypes)(TilingSprite)

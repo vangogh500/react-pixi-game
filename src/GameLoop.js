@@ -4,7 +4,7 @@ function timestamp() {
   return window.performance && window.performance.now ? window.performance.now() : new Date().getTime();
 }
 /**
- * Class representing a game loop
+ * Game loop.
  */
 export default class GameLoop {
   listeners: Array<(dt: number) => void>
@@ -16,12 +16,24 @@ export default class GameLoop {
     this.playing = false
     this.fpsCap = fpsCap
   }
+  
+  /**
+   * Subscribe a listener to the loop.
+   */
   add(listener: (dt: number) => void) {
     this.listeners.push(listener)
   }
+
+  /**
+   * Remove a listener from the loop. *Removed via reference.
+   */
   remove(listener: (dt: number) => void) {
     this.listeners.splice(this.listeners.indexOf(listener),1)
   }
+
+  /**
+   * Starts the loop.
+   */
   start(): void {
     this.playing = true
     var now, dt, last = timestamp()
@@ -38,6 +50,10 @@ export default class GameLoop {
     }
     requestAnimationFrame(frame)
   }
+
+  /**
+   * Terminates the loop after 1 cycle.
+   */
   stop(): void {
     this.playing = false
   }

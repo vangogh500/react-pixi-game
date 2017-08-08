@@ -4,6 +4,7 @@ import {shallowCompare} from '../utils.js'
 
 /**
  * Mixin function for components that are not Dom components.
+ * @alias NonDom
  * @param {Class} superclass
  */
 const mixin = <PropType: {}>(superclass: Class<any>) => class extends superclass {

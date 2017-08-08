@@ -1,6 +1,6 @@
 /* @flow */
 import {Graphics as PIXIGraphics, Point as PIXIPoint} from 'pixi.js'
-import type {Sprite as PIXISprite} from 'pixi.js'
+import type {Sprite as PIXISprite, DisplayObject as PIXIDisplayObject} from 'pixi.js'
 import {Vector} from 'vangogh500-physics'
 import mix from '../../mixins/mix.js'
 import DisplayObject from './DisplayObject.js'
@@ -18,6 +18,7 @@ type StateTypes = {
 
 /**
  * Mixin function for components that extend Pixi.Sprite.
+ * @alias SpriteMixin
  * @param {Class} superclass
  */
 const mixin = <PropType: PropTypes>(superclass: Class<any>) => class extends mix(superclass).with(DisplayObject) {

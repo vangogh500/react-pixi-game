@@ -1,5 +1,4 @@
 import * as hocs from '../hocs.js'
-import Game from '../Game.js'
 import React from 'react'
 import {ticker} from 'pixi.js'
 import ReactPropTypes from 'prop-types'

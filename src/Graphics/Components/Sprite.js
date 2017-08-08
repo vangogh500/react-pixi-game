@@ -10,8 +10,9 @@ import SpriteMixin from '../mixins/Sprite.js'
 import {Vector} from 'vangogh500-physics'
 import {withContext} from '../../hocs.js'
 /**
- * Prop types.
+ * Prop types. Inherits props from DisplayObject mixin.
  * @memberof Sprite
+ * @prop {string | [string, string]} res Resource to create Sprite. A url or a reference to a resource provided by resource provider.
  */
 type PropTypes = {
   res: string | [string,string],
@@ -42,8 +43,7 @@ class Sprite extends mix(React.Component).with(SpriteMixin) {
   props: PropTypes
 
   /**
-   * Creates an instance of pixi sprite.
-   * @memberof Sprite
+   * Creates an instance of pixi sprite using props.
    */
   createSpriteWithProps(props: PropTypes): PIXISprite {
     const {resources, res} = props

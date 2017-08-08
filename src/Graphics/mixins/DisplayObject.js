@@ -20,7 +20,8 @@ type StateTypes = {
 }
 
 /**
- * Mixin function for components that should only update on prop changes.
+ * Mixin function for components that is a DisplayObject.
+ * @alias DisplayObject
  * @param {Class} superclass
  */
 const mixin = <PropType: PropTypes>(superclass: Class<any>) => class extends mix(superclass).with(Mounted('displayObject')) {
