@@ -10,7 +10,8 @@ import Rectangle from './Graphics/Components/Rectangle.js'
 import Circle from './Graphics/Components/Circle.js'
 // events
 import TickEvent from './Events/TickEvent.js'
+import PointerEvent from './Events/PointerEvent.js'
 
 export {
-  Stage, Loop, ResourceLoader, Sprite, AnimatedSprite, TilingSprite, Rectangle, Circle, TickEvent
+  Stage, Loop, ResourceLoader, Sprite, AnimatedSprite, TilingSprite, Rectangle, Circle, TickEvent, PointerEvent
 }

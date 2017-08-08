@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {Stage, Loop, ResourceLoader, TilingSprite, AnimatedSprite, TickEvent} from '../dist/index.js'
+import {Stage, Loop, ResourceLoader, TilingSprite, AnimatedSprite, TickEvent, PointerEvent} from '../dist/index.js'
 import {Vector} from 'vangogh500-physics'
 
 class Animation extends React.Component {
@@ -11,6 +11,11 @@ class Animation extends React.Component {
     this.setState({ pos: this.state.pos.add(new Vector(1,0,0))})
   }).bind(this)
 
+  handleClick = (function(event) {
+    const {x,y} = event.data.global
+    this.setState({ pos: new Vector(x,y) })
+  }).bind(this)
+
   render() {
     return (
       <div>
@@ -19,6 +24,7 @@ class Animation extends React.Component {
         <AnimatedSprite animationSpeed={2} res={[['example','girl_1.png'], ['example', 'girl_2.png']]} position={this.state.pos}/>
         }
         <TickEvent onTick={this.handleTick} />
+        <PointerEvent onPointerDown={this.handleClick} />
       </div>
     )
   }
