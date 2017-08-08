@@ -36,7 +36,6 @@ class PointerEvent extends mix(React.Component).with(PropBasedUpdate, NonDom) {
   componentDidMount(): void {
     const {container, onPointerDown} = this.props
     container.interactive = true
-    console.log(container)
     container.on('pointerdown', onPointerDown)
   }
   /**

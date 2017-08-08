@@ -33,9 +33,9 @@ class Rectangle extends mix(React.Component).with(Graphical) {
   /**
    * Updates rectangle graphic using props.
    */
-  updateGraphics() {
+  updateGraphics(props) {
     const {graphics} = this.state
-    const {color, alpha, position, size, rotation} = this.props
+    const {color, alpha, position, size, rotation} = props
     graphics.setTransform(position.x, position.y, 1, 1, rotation.z)
     graphics.alpha = alpha
     graphics.width = size.x

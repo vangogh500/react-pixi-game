@@ -72,7 +72,6 @@ export default class ResourceLoader extends React.PureComponent<DefaultPropTypes
    * Life cycle hook for mounting. Loads resources before children are rendered.
    */
   componentDidMount(): void {
-    console.log("Resource mount")
     const {loader} = this.state
     loader.load((loader) => {
       this.setState({

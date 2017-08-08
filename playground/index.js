@@ -1,29 +1,23 @@
+/* @flow */
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {Stage, Loop, ResourceLoader, TilingSprite, AnimatedSprite, TickEvent, PointerEvent} from '../dist/index.js'
+import {Stage, Loop, ResourceLoader, Rectangle, TickEvent, PointerEvent} from '../dist/index.js'
+import Circle from '../src/Graphics/Components/Circle.js'
 import {Vector} from 'vangogh500-physics'
 
 class Animation extends React.Component {
-
-  state = { pos:new Vector(0,200,0) }
-
-  handleTick = (function() {
-    this.setState({ pos: this.state.pos.add(new Vector(1,0,0))})
-  }).bind(this)
-
+  state = {
+    pos: new Vector(400,300)
+  }
   handleClick = (function(event) {
     const {x,y} = event.data.global
     this.setState({ pos: new Vector(x,y) })
   }).bind(this)
-
   render() {
+    const {pos} = this.state
     return (
       <div>
-        <TilingSprite res={['example', 'grass.png']} size={new Vector(1600,1200)} />
-        {
-        <AnimatedSprite animationSpeed={2} res={[['example','girl_1.png'], ['example', 'girl_2.png']]} position={this.state.pos}/>
-        }
-        <TickEvent onTick={this.handleTick} />
+        <Circle position={pos} size={new Vector(150,100)} color={0x888FFF} />
         <PointerEvent onPointerDown={this.handleClick} />
       </div>
     )

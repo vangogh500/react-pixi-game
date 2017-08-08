@@ -24,7 +24,7 @@ type PropTypes = {
  */
 const mixin = <PropType: PropTypes>(superclass: Class<any>) => class extends mix(superclass).with(PropBasedUpdate, Mounted('graphics')) {
   +drawGraphics: () => void
-  +updateGraphics: () => void
+  +updateGraphics: (props: PropType) => void
   static defaultProps = {
     alpha: 1,
     position: new Vector(),
@@ -43,7 +43,7 @@ const mixin = <PropType: PropTypes>(superclass: Class<any>) => class extends mix
   }
 
   componentWillUpdate(nextProps: PropType): void {
-    this.updateGraphics()
+    this.updateGraphics(nextProps)
   }
   render() {
     return null

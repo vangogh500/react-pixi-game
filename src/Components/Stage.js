@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react'
 import ReactPropTypes from 'prop-types'
-import {autoDetectRenderer, Container} from 'pixi.js'
+import {autoDetectRenderer, Container, Rectangle} from 'pixi.js'
 import type {WebGLRenderer, CanvasRenderer} from 'pixi.js'
 import {contextProvider, withContext} from '../hocs.js'
 import GameLoop from '../GameLoop.js'
@@ -24,7 +24,7 @@ type PropTypes = {
   height: number,
   resolution: number,
   className?: string,
-  loop?: GameLoop,
+  loop: GameLoop,
   children?: React.Children
 }
 
@@ -57,6 +57,8 @@ class Stage extends mix(React.Component).with(PropBasedUpdate) {
     super(props)
     const renderer = new autoDetectRenderer({ width: props.width, height: props.height, resolution: props.resolution })
     const container = new Container()
+    console.log(new Rectangle(0,0,props.width, props.height))
+    container.hitArea = new Rectangle(0,0,props.width, props.height)
     renderer.render(container)
     this.state = {
       renderer, container
@@ -75,7 +77,7 @@ class Stage extends mix(React.Component).with(PropBasedUpdate) {
     const {loop} = this.props
     const { renderer, container } = this.state
     this.refs.domcontainer.appendChild(renderer.view)
-    if(loop) { loop.add(this.update) }
+    loop.add(this.update)
   }
 
   /**
@@ -84,7 +86,7 @@ class Stage extends mix(React.Component).with(PropBasedUpdate) {
   componentWillUnmount() {
     const {loop} = this.props
     const {renderer} = this.state
-    if(loop) { loop.remove(this.update) }
+    loop.remove(this.update)
     this.refs.domcontainer.removeChild(renderer.view)
   }
 
@@ -105,6 +107,6 @@ class Stage extends mix(React.Component).with(PropBasedUpdate) {
 }
 
 const contextTypes = {
-  loop: ReactPropTypes.object
+  loop: ReactPropTypes.object.isRequired
 }
 export default withContext(contextTypes)(Stage)
