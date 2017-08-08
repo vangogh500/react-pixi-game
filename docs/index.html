@@ -1,0 +1,5109 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>react-pixi-game 0.0.4-a | Documentation</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='assets/bass.css' type='text/css' rel='stylesheet' />
+  <link href='assets/style.css' type='text/css' rel='stylesheet' />
+  <link href='assets/github.css' type='text/css' rel='stylesheet' />
+</head>
+<body class='documentation'>
+  <div class='max-width-4 mx-auto'>
+    <div class='clearfix md-mxn2'>
+      <div class='fixed xs-hide fix-3 overflow-auto max-height-100'>
+        <div class='py1 px2'>
+          <h3 class='mb0 no-anchor'>react-pixi-game</h3>
+          <div class='mb1'><code>0.0.4-a</code></div>
+          <input
+            placeholder='Filter'
+            id='filter-input'
+            class='col12 block input'
+            type='text' />
+          <div id='toc'>
+            <ul class='list-reset h5 py1-ul'>
+              
+                
+                <li><a
+                  href='#loop'
+                  class=" toggle-sibling">
+                  Loop
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  <ul class='list-reset py1-ul pl1'>
+                    <li class='h5'><span>Static members</span></li>
+                    
+                      <li><a
+                        href='#loopprops'
+                        class='regular pre-open'>
+                        .props
+                      </a></li>
+                    
+                    </ul>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#loopcomponentdidmount'
+                        class='regular pre-open'>
+                        #componentDidMount
+                      </a></li>
+                      
+                      <li><a
+                        href='#loopcomponentwillunmount'
+                        class='regular pre-open'>
+                        #componentWillUnmount
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#resourceloader'
+                  class=" toggle-sibling">
+                  ResourceLoader
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  <ul class='list-reset py1-ul pl1'>
+                    <li class='h5'><span>Static members</span></li>
+                    
+                      <li><a
+                        href='#resourceloaderproptypes'
+                        class='regular pre-open'>
+                        .PropTypes
+                      </a></li>
+                    
+                      <li><a
+                        href='#resourceloadercreateloaderfromresources'
+                        class='regular pre-open'>
+                        .createLoaderFromResources
+                      </a></li>
+                    
+                    </ul>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#resourceloadercomponentdidmount'
+                        class='regular pre-open'>
+                        #componentDidMount
+                      </a></li>
+                      
+                      <li><a
+                        href='#resourceloadercomponentwillreceiveprops'
+                        class='regular pre-open'>
+                        #componentWillReceiveProps
+                      </a></li>
+                      
+                      <li><a
+                        href='#resourceloaderrender'
+                        class='regular pre-open'>
+                        #render
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#stage'
+                  class=" toggle-sibling">
+                  Stage
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  <ul class='list-reset py1-ul pl1'>
+                    <li class='h5'><span>Static members</span></li>
+                    
+                      <li><a
+                        href='#stageproptypes'
+                        class='regular pre-open'>
+                        .PropTypes
+                      </a></li>
+                    
+                    </ul>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#stagecomponentdidmount'
+                        class='regular pre-open'>
+                        #componentDidMount
+                      </a></li>
+                      
+                      <li><a
+                        href='#stagecomponentwillunmount'
+                        class='regular pre-open'>
+                        #componentWillUnmount
+                      </a></li>
+                      
+                      <li><a
+                        href='#stagerender'
+                        class='regular pre-open'>
+                        #render
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#pointerevent'
+                  class=" toggle-sibling">
+                  PointerEvent
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  <ul class='list-reset py1-ul pl1'>
+                    <li class='h5'><span>Static members</span></li>
+                    
+                      <li><a
+                        href='#pointereventproptypes'
+                        class='regular pre-open'>
+                        .PropTypes
+                      </a></li>
+                    
+                    </ul>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#pointereventcomponentdidmount'
+                        class='regular pre-open'>
+                        #componentDidMount
+                      </a></li>
+                      
+                      <li><a
+                        href='#pointereventcomponentwillunmount'
+                        class='regular pre-open'>
+                        #componentWillUnmount
+                      </a></li>
+                      
+                      <li><a
+                        href='#pointereventcomponentwillupdate'
+                        class='regular pre-open'>
+                        #componentWillUpdate
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#tickevent'
+                  class=" toggle-sibling">
+                  TickEvent
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  <ul class='list-reset py1-ul pl1'>
+                    <li class='h5'><span>Static members</span></li>
+                    
+                      <li><a
+                        href='#tickeventproptypes'
+                        class='regular pre-open'>
+                        .PropTypes
+                      </a></li>
+                    
+                    </ul>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#tickeventcomponentdidmount'
+                        class='regular pre-open'>
+                        #componentDidMount
+                      </a></li>
+                      
+                      <li><a
+                        href='#tickeventcomponentwillunmount'
+                        class='regular pre-open'>
+                        #componentWillUnmount
+                      </a></li>
+                      
+                      <li><a
+                        href='#tickeventcomponentwillupdate'
+                        class='regular pre-open'>
+                        #componentWillUpdate
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#gameloop'
+                  class=" toggle-sibling">
+                  GameLoop
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#gameloopadd'
+                        class='regular pre-open'>
+                        #add
+                      </a></li>
+                      
+                      <li><a
+                        href='#gameloopremove'
+                        class='regular pre-open'>
+                        #remove
+                      </a></li>
+                      
+                      <li><a
+                        href='#gameloopstart'
+                        class='regular pre-open'>
+                        #start
+                      </a></li>
+                      
+                      <li><a
+                        href='#gameloopstop'
+                        class='regular pre-open'>
+                        #stop
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#animatedsprite'
+                  class=" toggle-sibling">
+                  AnimatedSprite
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  <ul class='list-reset py1-ul pl1'>
+                    <li class='h5'><span>Static members</span></li>
+                    
+                      <li><a
+                        href='#animatedspriteproptypes'
+                        class='regular pre-open'>
+                        .PropTypes
+                      </a></li>
+                    
+                    </ul>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#animatedspriteupdate'
+                        class='regular pre-open'>
+                        #update
+                      </a></li>
+                      
+                      <li><a
+                        href='#animatedspritecomponentdidmount'
+                        class='regular pre-open'>
+                        #componentDidMount
+                      </a></li>
+                      
+                      <li><a
+                        href='#animatedspritecomponentwillunmount'
+                        class='regular pre-open'>
+                        #componentWillUnmount
+                      </a></li>
+                      
+                      <li><a
+                        href='#animatedspritecreatespritewithprops'
+                        class='regular pre-open'>
+                        #createSpriteWithProps
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#circle'
+                  class=" toggle-sibling">
+                  Circle
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#circledrawgraphics'
+                        class='regular pre-open'>
+                        #drawGraphics
+                      </a></li>
+                      
+                      <li><a
+                        href='#circleupdategraphics'
+                        class='regular pre-open'>
+                        #updateGraphics
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#rectangle'
+                  class=" toggle-sibling">
+                  Rectangle
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#rectangledrawgraphics'
+                        class='regular pre-open'>
+                        #drawGraphics
+                      </a></li>
+                      
+                      <li><a
+                        href='#rectangleupdategraphics'
+                        class='regular pre-open'>
+                        #updateGraphics
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#sprite'
+                  class=" toggle-sibling">
+                  Sprite
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  <ul class='list-reset py1-ul pl1'>
+                    <li class='h5'><span>Static members</span></li>
+                    
+                      <li><a
+                        href='#spriteproptypes'
+                        class='regular pre-open'>
+                        .PropTypes
+                      </a></li>
+                    
+                    </ul>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#spritecreatespritewithprops'
+                        class='regular pre-open'>
+                        #createSpriteWithProps
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#tilingsprite'
+                  class=" toggle-sibling">
+                  TilingSprite
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  <ul class='list-reset py1-ul pl1'>
+                    <li class='h5'><span>Static members</span></li>
+                    
+                      <li><a
+                        href='#tilingspriteproptypes'
+                        class='regular pre-open'>
+                        .PropTypes
+                      </a></li>
+                    
+                    </ul>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#tilingspriteupdate'
+                        class='regular pre-open'>
+                        #update
+                      </a></li>
+                      
+                      <li><a
+                        href='#tilingspritecreatespritewithprops'
+                        class='regular pre-open'>
+                        #createSpriteWithProps
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#displayobject'
+                  class="">
+                  DisplayObject
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#graphical'
+                  class="">
+                  Graphical
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#mounted'
+                  class="">
+                  Mounted
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#spritemixin'
+                  class="">
+                  SpriteMixin
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#hocs'
+                  class="">
+                  Hocs
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#contextprovider'
+                  class="">
+                  contextProvider
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#withcontext'
+                  class="">
+                  withContext
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#withresources'
+                  class="">
+                  withResources
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#mix'
+                  class="">
+                  mix
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#nondom'
+                  class="">
+                  NonDom
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#propbasedupdate'
+                  class="">
+                  PropBasedUpdate
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#purepropupdate'
+                  class="">
+                  PurePropUpdate
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#pureprovider'
+                  class="">
+                  PureProvider
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#world'
+                  class=" toggle-sibling">
+                  World
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  <ul class='list-reset py1-ul pl1'>
+                    <li class='h5'><span>Static members</span></li>
+                    
+                      <li><a
+                        href='#worldproptypes'
+                        class='regular pre-open'>
+                        .PropTypes
+                      </a></li>
+                    
+                      <li><a
+                        href='#worldstatetypes'
+                        class='regular pre-open'>
+                        .StateTypes
+                      </a></li>
+                    
+                      <li><a
+                        href='#worldchildcontexttypes'
+                        class='regular pre-open'>
+                        .childContextTypes
+                      </a></li>
+                    
+                    </ul>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#worldgetchildcontext'
+                        class='regular pre-open'>
+                        #getChildContext
+                      </a></li>
+                      
+                      <li><a
+                        href='#worldshouldcomponentupdate'
+                        class='regular pre-open'>
+                        #shouldComponentUpdate
+                      </a></li>
+                      
+                      <li><a
+                        href='#worldrender'
+                        class='regular pre-open'>
+                        #render
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+            </ul>
+          </div>
+          <div class='mt1 h6 quiet'>
+            <a href='http://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
+          </div>
+        </div>
+      </div>
+      <div class='fix-margin-3'>
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='loop'>
+      Loop
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Provides the rendering for react-pixi-game.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new Loop(props: any)</div>
+  
+  
+    <p>
+      Extends
+      
+        mix(React.Component).with(PropBasedUpdate, PurePropUpdate('loop'), PureProvider({loop: ReactPropTypes.object.isRequired}))
+      
+    </p>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>props</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>&lt;Loop scale={<span class="hljs-number">0.5</span>}&gt;
+  { <span class="hljs-comment">// graphics go here }</span>
+&lt;<span class="hljs-regexp">/Loop&gt;</span></pre>
+    
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Static Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='loopprops'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>props</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Prop types</p>
+
+
+  <div class='pre p1 fill-light mt0'>props</div>
+  
+    <p>
+      Type:
+      {fpsCap: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>}
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>fpsCap</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+          : Used to cap fps. Defaults to 30.
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='loopcomponentdidmount'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>componentDidMount()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Life cycle hook for mounting. Starts the loop once it is mounted.</p>
+
+
+  <div class='pre p1 fill-light mt0'>componentDidMount()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='loopcomponentwillunmount'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>componentWillUnmount()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Life cycle hook for mounting. Stops the game loop.</p>
+
+
+  <div class='pre p1 fill-light mt0'>componentWillUnmount()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='resourceloader'>
+      ResourceLoader
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Provides resources for the game.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new ResourceLoader(props: PropTypes)</div>
+  
+  
+    <p>
+      Extends
+      
+        React.PureComponent
+      
+    </p>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>props</span> <code class='quiet'>(PropTypes)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>&lt;ResourceLoader resources={[<span class="hljs-string">'bunny'</span>, <span class="hljs-string">'./bunny.png'</span>, <span class="hljs-string">'octopus'</span>, <span class="hljs-string">'./octopus.png'</span>]}&gt;
+ { <span class="hljs-comment">// resource consumers go here }</span>
+&lt;<span class="hljs-regexp">/ResourceLoader&gt;</span></pre>
+    
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Static Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='resourceloaderproptypes'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>PropTypes</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Prop Types</p>
+
+
+  <div class='pre p1 fill-light mt0'>PropTypes</div>
+  
+    <p>
+      Type:
+      {resources: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;[<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>]>, children: React.Children?}
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>resources</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;[<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>]>)</code>
+          : Array of resources in tuple form: 
+[
+name, path
+]
+. Defaults to an empty array.
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>children</span> <code class='quiet'>(React.Children?)</code>
+          : JSX children. Resources once loaded will be passed to them via context.
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>resources</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;[<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>]>)</code>
+          
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>children</span> <code class='quiet'>(React.Children?)</code>
+          
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='resourceloadercreateloaderfromresources'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>createLoaderFromResources</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Creates an instance of loader configured with the resources.</p>
+
+
+  <div class='pre p1 fill-light mt0'>createLoaderFromResources</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>resources</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;[<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>]>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>PIXI.loaders.Loader</code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='resourceloadercomponentdidmount'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>componentDidMount()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Life cycle hook for mounting. Loads resources before children are rendered.</p>
+
+
+  <div class='pre p1 fill-light mt0'>componentDidMount(): void</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='resourceloadercomponentwillreceiveprops'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>componentWillReceiveProps(nextProps)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Handles props. If resources are different, the loader will load again.</p>
+
+
+  <div class='pre p1 fill-light mt0'>componentWillReceiveProps(nextProps: PropTypes): void</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>nextProps</span> <code class='quiet'>(PropTypes)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='resourceloaderrender'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>render()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Renders react element. Will render null until resources are loaded.</p>
+
+
+  <div class='pre p1 fill-light mt0'>render(): React.Element&#x3C;any>?</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>React.Element&#x3C;any>?</code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='stage'>
+      Stage
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Provides the rendering engine and view for react-pixi-game.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new Stage(props: PropTypes)</div>
+  
+  
+    <p>
+      Extends
+      
+        mix(React.Component).with(PropBasedUpdate)
+      
+    </p>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>props</span> <code class='quiet'>(PropTypes)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>&lt;Stage <span class="hljs-keyword">with</span>={<span class="hljs-number">200</span>} height={<span class="hljs-number">300</span>} resolution={<span class="hljs-number">1</span>}&gt;
+  { <span class="hljs-comment">// graphics go here }</span>
+&lt;<span class="hljs-regexp">/Stage&gt;</span></pre>
+    
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Static Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='stageproptypes'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>PropTypes</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Prop types.</p>
+
+
+  <div class='pre p1 fill-light mt0'>PropTypes</div>
+  
+    <p>
+      Type:
+      {width: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, height: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, resolution: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, className: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?, loop: <a href="#gameloop">GameLoop</a>, children: React.Children?}
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>width</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+          : Width of renderer and stage. Defaults to 800.
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>height</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+          : Height of renderer and stage. Defaults to 600.
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>resolution</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+          : Resolution of the renderer. Defaults to 1.
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>className</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+          : CSS classes to be applied to the dom container.
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>children</span> <code class='quiet'>(React.Children)</code>
+          : JSX children. Reference to the stage will be passed down via context.
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>width</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+          
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>height</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+          
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>resolution</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+          
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>className</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?)</code>
+          
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>loop</span> <code class='quiet'>(<a href="#gameloop">GameLoop</a>)</code>
+          
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>children</span> <code class='quiet'>(React.Children?)</code>
+          
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='stagecomponentdidmount'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>componentDidMount()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Life cycle hook for mounting. Hooks up the rendering engine to the game loop and mounts to DOM.</p>
+
+
+  <div class='pre p1 fill-light mt0'>componentDidMount()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='stagecomponentwillunmount'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>componentWillUnmount()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Life cycle hook for unmounting. Unhooks the rendering engine from the game loop and DOM.</p>
+
+
+  <div class='pre p1 fill-light mt0'>componentWillUnmount()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='stagerender'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>render()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Life cycle hook for rendering.</p>
+
+
+  <div class='pre p1 fill-light mt0'>render()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='pointerevent'>
+      PointerEvent
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>A pointer event.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new PointerEvent()</div>
+  
+  
+    <p>
+      Extends
+      
+        mix(React.Component).with(PropBasedUpdate, NonDom)
+      
+    </p>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>handleClick = <span class="hljs-function">(<span class="hljs-params">event</span>) =&gt;</span> { <span class="hljs-keyword">this</span>.setState({ <span class="hljs-attr">toggle</span>: !<span class="hljs-keyword">this</span>.state.toggle })}
+render() {
+ <span class="hljs-keyword">return</span> (
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">PointerEvent</span> <span class="hljs-attr">onPointerDown</span>=<span class="hljs-string">{this.handleClick}</span> /&gt;</span>
+ )
+}</span></pre>
+    
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Static Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='pointereventproptypes'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>PropTypes</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  
+
+  <div class='pre p1 fill-light mt0'>PropTypes</div>
+  
+    <p>
+      Type:
+      {container: PIXIContainer, onPointerDown: function (event: any): void}
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>onPointerDown</span> <code class='quiet'>(function (delta: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): void)</code>
+          : Call back to call for on a pointer down event. Event is passed to the call back.
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>container</span> <code class='quiet'>(PIXIContainer)</code>
+          
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>onPointerDown</span> <code class='quiet'>(function (event: any): void)</code>
+          
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='pointereventcomponentdidmount'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>componentDidMount()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Life cycle hook for mounting. Subscribes callbacks to the container.</p>
+
+
+  <div class='pre p1 fill-light mt0'>componentDidMount(): void</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='pointereventcomponentwillunmount'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>componentWillUnmount()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Life cycle hook for unmounting. Unsubscribes callbacks from the container.</p>
+
+
+  <div class='pre p1 fill-light mt0'>componentWillUnmount(): void</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='pointereventcomponentwillupdate'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>componentWillUpdate(nextProps)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Life cycle hook for updating. If the call back is different, unhook old ones and hook up the new ones.</p>
+
+
+  <div class='pre p1 fill-light mt0'>componentWillUpdate(nextProps: PropTypes): void</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>nextProps</span> <code class='quiet'>(PropTypes)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='tickevent'>
+      TickEvent
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>A tick event.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new TickEvent()</div>
+  
+  
+    <p>
+      Extends
+      
+        mix(React.Component).with(PropBasedUpdate, NonDom)
+      
+    </p>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>handleTick = <span class="hljs-function">(<span class="hljs-params">delta</span>) =&gt;</span> { <span class="hljs-keyword">this</span>.setState({ <span class="hljs-attr">tick</span>: <span class="hljs-keyword">this</span>.state.tick + delta })}
+render() {
+ <span class="hljs-keyword">return</span> (
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">TickEvent</span> <span class="hljs-attr">onTick</span>=<span class="hljs-string">{this.handleTick}</span> /&gt;</span>
+ )
+}</span></pre>
+    
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Static Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='tickeventproptypes'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>PropTypes</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  
+
+  <div class='pre p1 fill-light mt0'>PropTypes</div>
+  
+    <p>
+      Type:
+      {loop: <a href="#gameloop">GameLoop</a>, onTick: function (delta: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): void}
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>onTick</span> <code class='quiet'>(function (delta: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): void)</code>
+          : Call back to call for each tick. The time elapsed between each tick is passed as the first param.
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>loop</span> <code class='quiet'>(<a href="#gameloop">GameLoop</a>)</code>
+          
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>onTick</span> <code class='quiet'>(function (delta: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): void)</code>
+          
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='tickeventcomponentdidmount'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>componentDidMount()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Life cycle hook for mounting. Subscribes onTick to the game loop.</p>
+
+
+  <div class='pre p1 fill-light mt0'>componentDidMount(): void</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='tickeventcomponentwillunmount'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>componentWillUnmount()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Life cycle hook for unmounting. Unsubscribes onTick from the game loop.</p>
+
+
+  <div class='pre p1 fill-light mt0'>componentWillUnmount(): void</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='tickeventcomponentwillupdate'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>componentWillUpdate(nextProps)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Life cycle hook for updating. If the call back is different, the old one will be unhooked and the new one will be subscribed to the game loop.</p>
+
+
+  <div class='pre p1 fill-light mt0'>componentWillUpdate(nextProps: PropTypes): void</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>nextProps</span> <code class='quiet'>(PropTypes)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='gameloop'>
+      GameLoop
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Game loop.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new GameLoop(fpsCap: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, listeners: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;function (dt: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): void>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fpsCap</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>
+            = <code>30</code>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>listeners</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;function (dt: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): void>
+            = <code>[]</code>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='gameloopadd'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>add(listener)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Subscribe a listener to the loop.</p>
+
+
+  <div class='pre p1 fill-light mt0'>add(listener: function (dt: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): void)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>listener</span> <code class='quiet'>(function (dt: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): void)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='gameloopremove'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>remove(listener)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Remove a listener from the loop. *Removed via reference.</p>
+
+
+  <div class='pre p1 fill-light mt0'>remove(listener: function (dt: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): void)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>listener</span> <code class='quiet'>(function (dt: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): void)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='gameloopstart'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>start()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Starts the loop.</p>
+
+
+  <div class='pre p1 fill-light mt0'>start(): void</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='gameloopstop'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>stop()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Terminates the loop after 1 cycle.</p>
+
+
+  <div class='pre p1 fill-light mt0'>stop(): void</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='animatedsprite'>
+      AnimatedSprite
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Provides an animated sprite component.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new AnimatedSprite()</div>
+  
+  
+    <p>
+      Extends
+      
+        mix(React.Component).with(SpriteMixin)
+      
+    </p>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>&lt;ResourceProvider resources={[[<span class="hljs-string">'mario'</span>, <span class="hljs-string">'/img/mario.png'</span>], [<span class="hljs-string">'mario2'</span>, <span class="hljs-string">'/img/mario2.png'</span>]]}&gt;
+ <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Stage</span> <span class="hljs-attr">autoResize</span>=<span class="hljs-string">{true}</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">AnimatedSprite</span> <span class="hljs-attr">resource</span>=<span class="hljs-string">{[</span>'<span class="hljs-attr">mario</span>', '<span class="hljs-attr">mario2</span>']} /&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">Stage</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ResourceProvider</span>&gt;</span></span></pre>
+    
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Static Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='animatedspriteproptypes'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>PropTypes</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Prop types. Inherits props from DisplayObject mixin.</p>
+
+
+  <div class='pre p1 fill-light mt0'>PropTypes</div>
+  
+    <p>
+      Type:
+      any
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>res</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | [<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>])>)</code>
+          : Resources for creating the frames. Can be an array of urls or array of strings/tuples ref resources from the resource provider.
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>animationSpeed</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+          : Speed of animation between frames. Defaults to 1.
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='animatedspriteupdate'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>update(props)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Updates the sprite.</p>
+
+
+  <div class='pre p1 fill-light mt0'>update(props: PropTypes)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>props</span> <code class='quiet'>(PropTypes)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='animatedspritecomponentdidmount'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>componentDidMount()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Mounts the component. Subsribes to the game loop.</p>
+
+
+  <div class='pre p1 fill-light mt0'>componentDidMount()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='animatedspritecomponentwillunmount'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>componentWillUnmount()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Unmounts the component. Unsubscribes from the game loop.
+\</p>
+
+
+  <div class='pre p1 fill-light mt0'>componentWillUnmount()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='animatedspritecreatespritewithprops'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>createSpriteWithProps(props)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Creates an instance of Animated Sprite using props.</p>
+
+
+  <div class='pre p1 fill-light mt0'>createSpriteWithProps(props: PropTypes): extras.AnimatedSprite</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>props</span> <code class='quiet'>(PropTypes)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>extras.AnimatedSprite</code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='circle'>
+      Circle
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Provides a circle graphic. Inherits props from Graphical mixin.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new Circle()</div>
+  
+  
+    <p>
+      Extends
+      
+        mix(React.Component).with(Graphical)
+      
+    </p>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>&lt;Circle position={<span class="hljs-keyword">new</span> Vector()} color={<span class="hljs-number">0xFFF888</span>} rotation={<span class="hljs-keyword">new</span> Vector(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-built_in">Math</span>.PI)} /&gt;</pre>
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='circledrawgraphics'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>drawGraphics()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Draws a circle on the container.</p>
+
+
+  <div class='pre p1 fill-light mt0'>drawGraphics()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='circleupdategraphics'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>updateGraphics(props)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Updates the circle graphic using props.</p>
+
+
+  <div class='pre p1 fill-light mt0'>updateGraphics(props: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>props</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='rectangle'>
+      Rectangle
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Provides a rectangle graphic. Inherits props from Graphical mixin.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new Rectangle()</div>
+  
+  
+    <p>
+      Extends
+      
+        mix(React.Component).with(Graphical)
+      
+    </p>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>&lt;Rectangle position={<span class="hljs-keyword">new</span> Vector()} color={<span class="hljs-number">0xFFF888</span>} rotation={<span class="hljs-keyword">new</span> Vector(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-built_in">Math</span>.PI)} /&gt;</pre>
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='rectangledrawgraphics'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>drawGraphics()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Draws the rectangle on the container.</p>
+
+
+  <div class='pre p1 fill-light mt0'>drawGraphics()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='rectangleupdategraphics'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>updateGraphics(props)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Updates rectangle graphic using props.</p>
+
+
+  <div class='pre p1 fill-light mt0'>updateGraphics(props: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>props</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='sprite'>
+      Sprite
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Provides a sprite component.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new Sprite()</div>
+  
+  
+    <p>
+      Extends
+      
+        mix(React.Component).with(SpriteMixin)
+      
+    </p>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>&lt;ResourceProvider resources={[[<span class="hljs-string">'mario'</span>, <span class="hljs-string">'/img/mario.png'</span>]]}&gt;
+ <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Stage</span> <span class="hljs-attr">autoResize</span>=<span class="hljs-string">{true}</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Sprite</span> <span class="hljs-attr">resource</span>=<span class="hljs-string">{</span>'<span class="hljs-attr">mario</span>'} /&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">Stage</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ResourceProvider</span>&gt;</span></span></pre>
+    
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Static Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='spriteproptypes'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>PropTypes</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Prop types. Inherits props from DisplayObject mixin.</p>
+
+
+  <div class='pre p1 fill-light mt0'>PropTypes</div>
+  
+    <p>
+      Type:
+      any
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>res</span> <code class='quiet'>((<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | [<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>]))</code>
+          : Resource to create Sprite. A url or a reference to a resource provided by resource provider.
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='spritecreatespritewithprops'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>createSpriteWithProps(props)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Creates an instance of pixi sprite using props.</p>
+
+
+  <div class='pre p1 fill-light mt0'>createSpriteWithProps(props: PropTypes): PIXISprite</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>props</span> <code class='quiet'>(PropTypes)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>PIXISprite</code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='tilingsprite'>
+      TilingSprite
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Provides a tiling sprite component.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new TilingSprite()</div>
+  
+  
+    <p>
+      Extends
+      
+        mix(React.Component).with(SpriteMixin)
+      
+    </p>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>&lt;ResourceProvider resources={[[<span class="hljs-string">'grass'</span>, <span class="hljs-string">'/img/grass.png'</span>]]}&gt;
+ <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Stage</span> <span class="hljs-attr">autoResize</span>=<span class="hljs-string">{true}</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">TilingSprite</span> <span class="hljs-attr">resource</span>=<span class="hljs-string">{</span>'<span class="hljs-attr">grass</span>'} /&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">Stage</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ResourceProvider</span>&gt;</span></span></pre>
+    
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Static Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='tilingspriteproptypes'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>PropTypes</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Prop types. Inherits props from DisplayObject mixin.</p>
+
+
+  <div class='pre p1 fill-light mt0'>PropTypes</div>
+  
+    <p>
+      Type:
+      any
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>res</span> <code class='quiet'>((<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | [<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>]))</code>
+          : Resource to create sprite. Can be an url or a reference to a resource from resource provider.
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>size</span> <code class='quiet'>(Vector)</code>
+          : Size of the sprite.
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='tilingspriteupdate'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>update(props)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Updates the sprite.</p>
+
+
+  <div class='pre p1 fill-light mt0'>update(props: PropTypes)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>props</span> <code class='quiet'>(PropTypes)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='tilingspritecreatespritewithprops'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>createSpriteWithProps(props)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Creates an instance of tiling sprite.</p>
+
+
+  <div class='pre p1 fill-light mt0'>createSpriteWithProps(props: PropTypes): extras.AnimatedSprite</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>props</span> <code class='quiet'>(PropTypes)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>extras.AnimatedSprite</code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='displayobject'>
+      DisplayObject
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Mixin function for components that is a DisplayObject.</p>
+
+
+  <div class='pre p1 fill-light mt0'>DisplayObject</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>superclass</span> <code class='quiet'>(Class)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='graphical'>
+      Graphical
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Mixin function for components that is a Graphic.</p>
+
+
+  <div class='pre p1 fill-light mt0'>Graphical</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>superclass</span> <code class='quiet'>(Class)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='mounted'>
+      Mounted
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Mixin function for components whose contents must be added and removed (add child, remove child).</p>
+
+
+  <div class='pre p1 fill-light mt0'>Mounted</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>target</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>superclass</span> <code class='quiet'>(Class)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='spritemixin'>
+      SpriteMixin
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Mixin function for components that extend Pixi.Sprite.</p>
+
+
+  <div class='pre p1 fill-light mt0'>SpriteMixin</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>superclass</span> <code class='quiet'>(Class)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='hocs'>
+      Hocs
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Higher order components.</p>
+
+
+  <div class='pre p1 fill-light mt0'>Hocs</div>
+  
+  
+
+  
+  <div>Version: 0.0.1</div>
+  
+  <div>Author: Kai Matsuda</div>
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='contextprovider'>
+      contextProvider
+    </h3>
+    
+    
+  </div>
+  
+
+  
+
+  <div class='pre p1 fill-light mt0'>contextProvider</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>childContextTypes</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+	    Context types using React proptypes.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>getChildContext</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    Function which returns context values.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a></code>:
+        A hoc providing context.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='withcontext'>
+      withContext
+    </h3>
+    
+    
+  </div>
+  
+
+  
+
+  <div class='pre p1 fill-light mt0'>withContext</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>contextTypes</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+	    Context types using React proptypes.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a></code>:
+        A function which takes a component and returns a hoc which has access to context.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='withresources'>
+      withResources
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Creates a hoc which provides resources through props.</p>
+
+
+  <div class='pre p1 fill-light mt0'>withResources</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>Component</span> <code class='quiet'>(Class&#x3C;React.Component>)</code>
+	    to wrap.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Class&#x3C;React.PureComponent></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='mix'>
+      mix
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Creates a mixin base from which the class can be mixed.</p>
+
+
+  <div class='pre p1 fill-light mt0'>mix(baseclass: Class): MixinBase</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>baseclass</span> <code class='quiet'>(Class)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>MixinBase</code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='nondom'>
+      NonDom
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Mixin function for components that are not Dom components.</p>
+
+
+  <div class='pre p1 fill-light mt0'>NonDom</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>superclass</span> <code class='quiet'>(Class)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='propbasedupdate'>
+      PropBasedUpdate
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Mixin function for components that should only update on prop changes.</p>
+
+
+  <div class='pre p1 fill-light mt0'>PropBasedUpdate</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>superclass</span> <code class='quiet'>(Class)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='purepropupdate'>
+      PurePropUpdate
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Mixin function for components that have pure updates.</p>
+
+
+  <div class='pre p1 fill-light mt0'>PurePropUpdate</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>target</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>superclass</span> <code class='quiet'>(Class)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='pureprovider'>
+      PureProvider
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Mixin functions for components that renders only to provide.</p>
+
+
+  <div class='pre p1 fill-light mt0'>PureProvider</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>childContextTypes</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>superclass</span> <code class='quiet'>(Class)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='world'>
+      World
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Physics environment provider.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new World()</div>
+  
+  
+    <p>
+      Extends
+      
+        React.Component
+      
+    </p>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>&lt;World world={{<span class="hljs-attr">p</span>:<span class="hljs-number">1</span>, <span class="hljs-attr">temperature</span>:<span class="hljs-number">10</span>}}&gt;
+ { \\bodies go here }
+&lt;<span class="hljs-regexp">/World&gt;</span></pre>
+    
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Static Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='worldproptypes'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>PropTypes</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  
+
+  <div class='pre p1 fill-light mt0'>PropTypes</div>
+  
+    <p>
+      Type:
+      {world: {}, children: React.Children?}
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>world</span> <code class='quiet'>({})</code>
+          
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>children</span> <code class='quiet'>(React.Children?)</code>
+          
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='worldstatetypes'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>StateTypes</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  
+
+  <div class='pre p1 fill-light mt0'>StateTypes</div>
+  
+    <p>
+      Type:
+      {Provider: Class&#x3C;React.PureComponent&#x3C;any, any, any>>}
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>Provider</span> <code class='quiet'>(Class&#x3C;React.PureComponent&#x3C;any, any, any>>)</code>
+          
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='worldchildcontexttypes'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>childContextTypes</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Child context types.</p>
+
+
+  <div class='pre p1 fill-light mt0'>childContextTypes</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>world</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+          
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='worldgetchildcontext'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>getChildContext()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Get child context</p>
+
+
+  <div class='pre p1 fill-light mt0'>getChildContext()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='worldshouldcomponentupdate'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>shouldComponentUpdate(nextProps)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Optimization for life cycle hooks.</p>
+
+
+  <div class='pre p1 fill-light mt0'>shouldComponentUpdate(nextProps: PropTypes): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>nextProps</span> <code class='quiet'>(PropTypes)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        If component should update.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='worldrender'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>render()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Renders react element.</p>
+
+
+  <div class='pre p1 fill-light mt0'>render(): React.Element</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>React.Element</code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+      </div>
+    </div>
+  </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/site.js'></script>
+</body>
+</html>

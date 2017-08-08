@@ -1,5 +1,5 @@
 import React from 'react'
-import {Game, Stage, ResourceProvider, Sprite, TickEvent} from 'react-pixi-game'
+import {Loop, Stage, ResourceLoader, Sprite, TickEvent} from 'react-pixi-game'
 import {Jumbotron} from 'reactstrap'
 import {Vector} from 'vangogh500-physics'
 import {FormattedMessage} from 'react-intl'
@@ -18,22 +18,22 @@ export default class AnimationExample extends React.Component<void,void,StateTyp
   render() {
     return (
       <div>
-        <Game>
+        <Loop>
           <Stage>
-            <ResourceProvider resources={[['example', './assets/spritesheet.json']]}>
+            <ResourceLoader resources={[['example', './assets/spritesheet.json']]}>
               {
-              <Sprite rotation={this.state.rotation} anchor={new Vector(0.5,0.5)} texture={['example', 'girl_1.png']} position={new Vector(400,300)}  />
+              <Sprite rotation={this.state.rotation} res={['example', 'girl_1.png']} position={new Vector(400,300)}  />
               }
               <TickEvent onTick={this.handleTick} />
-            </ResourceProvider>
+            </ResourceLoader>
           </Stage>
-        </Game>
+        </Loop>
         <Jumbotron className="m-w-800px">
           <p className="text-muted"><FormattedMessage id="animations.line_1" /></p>
           <p className="text-muted"><FormattedMessage id="animations.line_2" /></p>
           <pre className="font-weight-500">
             <code className="text-orange">import</code>{" "}
-            <code>{"{Game, Stage, ResourceProvider, Sprite, TickEvent}"}</code>{" "}
+            <code>{"{Loop, Stage, ResourceLoader, Sprite, TickEvent}"}</code>{" "}
             <code className="text-orange">from</code>{" "}
             <code className="text-green">'react-pixi-game'</code>
             <br/>
@@ -57,25 +57,25 @@ export default class AnimationExample extends React.Component<void,void,StateTyp
             <br/>
             <code>{"  return ("}</code>
             <br/>
-            <code>{"   <Game>"}</code>
+            <code>{"   <Loop fpsCap={30}>"}</code>
             <br/>
             <code>{"    <Stage width={800} height={600}>"}</code>
             <br />
-            <code>{"     <ResourceProvider resources={[['example', '/assets/spritesheet.json']]}>"}</code>
+            <code>{"     <ResourceLoader resources={[['example', '/assets/spritesheet.json']]}>"}</code>
             <br/>
             <code>{"      {"}</code>
             <br/>
-            <code>{"      <Sprite rotation={this.state.rotation} anchor={new Vector(0.5,0.5)} position={new Vector(400,300)} texture={['example', 'girl_1.png']} />"}</code>
+            <code>{"      <Sprite rotation={this.state.rotation} position={new Vector(400,300)} res={['example', 'girl_1.png']} />"}</code>
             <br/>
             <code>{"      }"}</code>
             <br/>
             <code>{"      <TickEvent onTick={this.handleTick} />"}</code>
             <br/>
-            <code>{"     </ResourceProvider>"}</code>
+            <code>{"     </ResourceLoader>"}</code>
             <br />
             <code>{"    </Stage>"}</code>
             <br />
-            <code>{"   </Game>"}</code>
+            <code>{"   </Loop>"}</code>
             <br/>
             <code>{"  )"}</code>
             <br/>

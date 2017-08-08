@@ -1,5 +1,5 @@
 import React from 'react'
-import {Game, Stage, ResourceProvider, AnimatedSprite} from 'react-pixi-game'
+import {Loop, Stage, ResourceLoader, AnimatedSprite} from 'react-pixi-game'
 import {Vector} from 'vangogh500-physics'
 import {Jumbotron} from 'reactstrap'
 import {FormattedMessage} from 'react-intl'
@@ -8,18 +8,18 @@ export default class AnimatedSpriteExample extends React.Component {
   render() {
     return (
       <div>
-        <Game>
+        <Loop>
           <Stage>
-            <ResourceProvider resources={[['example', './assets/spritesheet.json']]}>
-              <AnimatedSprite animationSpeed={0.03} position={new Vector(400,300)} anchor={new Vector(0.5,0.5)} textures={[['example', 'girl_1.png'], ['example', 'girl_2.png']]} />
-            </ResourceProvider>
+            <ResourceLoader resources={[['example', './assets/spritesheet.json']]}>
+            <AnimatedSprite animationSpeed={2} res={[['example','girl_1.png'], ['example', 'girl_2.png']]} position={new Vector(400,300)}/>
+            </ResourceLoader>
           </Stage>
-        </Game>
+        </Loop>
         <Jumbotron className="m-w-800px">
           <p className="text-muted"><FormattedMessage id="animatedsprite.line_1" /></p>
           <pre className="font-weight-500">
             <code className="text-orange">import</code>{" "}
-            <code>{"{Game, Stage, ResourceProvider, AnimatedSprite}"}</code>{" "}
+            <code>{"{Loop, Stage, ResourceLoader, AnimatedSprite}"}</code>{" "}
             <code className="text-orange">from</code>{" "}
             <code className="text-green">'react-pixi-game'</code>
             <br/>
@@ -28,19 +28,19 @@ export default class AnimatedSpriteExample extends React.Component {
             <code className="text-orange">from</code>{" "}
             <code className="text-green">'vangogh500-physics'</code>
             <br/>
-            <code>{"<Game>"}</code>
+            <code>{"<Loop>"}</code>
             <br/>
             <code>{" <Stage width={800} height={600}>"}</code>
             <br />
-            <code>{"  <ResourceProvider resources={[['example', '/assets/spritesheet.json']]}>"}</code>
+            <code>{"  <ResourceLoader resources={[['example', '/assets/spritesheet.json']]}>"}</code>
             <br/>
-            <code>{"   <AnimatedSprite animationSpeed={0.03} position={new Vector(100,100)} texture={[['example', 'girl_1.png'],['example','girl_2.png']]} />"}</code>
+            <code>{"   <AnimatedSprite animationSpeed={2} position={new Vector(400,300)} res={[['example', 'girl_1.png'],['example','girl_2.png']]} />"}</code>
             <br/>
-            <code>{"  </ResourceProvider>"}</code>
+            <code>{"  </ResourceLoader>"}</code>
             <br />
             <code>{" </Stage>"}</code>
             <br />
-            <code>{"</Game>"}</code>
+            <code>{"</Loop>"}</code>
           </pre>
         </Jumbotron>
       </div>

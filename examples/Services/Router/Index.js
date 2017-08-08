@@ -18,6 +18,7 @@ import SpriteExample from '../../Scenes/Examples/Sprite.js'
 import AnimationExample from '../../Scenes/Examples/Animations.js'
 import AnimatedSprite from '../../Scenes/Examples/AnimatedSprite.js'
 import TilingSprite from '../../Scenes/Examples/TilingSprite.js'
+import PointerEvent from '../../Scenes/Examples/PointerEvent.js'
 
 type PropTypes = {
   history: RouterTypes.HistoryType
@@ -49,6 +50,7 @@ export default class Router extends React.Component<void,PropTypes,void> {
               <Route exact path="/examples/animations" component={AnimationExample} />
               <Route exact path="/examples/animatedsprite" component={AnimatedSprite} />
               <Route exact path="/examples/tilingsprite" component={TilingSprite} />
+              <Route exact path="/examples/pointerevent" component={PointerEvent} />
             </UIContainer>
           </LocaleProvider>
         </div>

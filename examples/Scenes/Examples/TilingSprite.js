@@ -1,5 +1,5 @@
 import React from 'react'
-import {Game, Stage, ResourceProvider, TilingSprite} from 'react-pixi-game'
+import {Loop, Stage, ResourceLoader, TilingSprite} from 'react-pixi-game'
 import {Vector} from 'vangogh500-physics'
 import {Jumbotron} from 'reactstrap'
 import {FormattedMessage} from 'react-intl'
@@ -7,13 +7,13 @@ export default class TilingSpriteExample extends React.Component {
   render() {
     return (
       <div>
-        <Game>
+        <Loop>
           <Stage>
-            <ResourceProvider resources={[['example', './assets/spritesheet.json']]}>
-              <TilingSprite size={new Vector(600,600)} texture={['example', 'grass.png']} />
-            </ResourceProvider>
+            <ResourceLoader resources={[['example', './assets/spritesheet.json']]}>
+              <TilingSprite size={new Vector(1200,1200)} res={['example', 'grass.png']} />
+            </ResourceLoader>
           </Stage>
-        </Game>
+        </Loop>
         <Jumbotron className="m-w-800px">
           <p className="text-muted"><FormattedMessage id="tilingsprite.line_1" /></p>
           <pre className="font-weight-500">
@@ -33,7 +33,7 @@ export default class TilingSpriteExample extends React.Component {
             <br />
             <code>{"  <ResourceProvider resources={[['example', '/assets/spritesheet.json']]}>"}</code>
             <br/>
-            <code>{"   <TilingSprite size={new Vector(300,300)} texture={['example', 'grass.png']} />"}</code>
+            <code>{"   <TilingSprite size={new Vector(1200,1200)} texture={['example', 'grass.png']} />"}</code>
             <br/>
             <code>{"  </ResourceProvider>"}</code>
             <br />

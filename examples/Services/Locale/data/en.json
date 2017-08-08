@@ -1,4 +1,8 @@
 {
+  "mainnav": {
+    "docs": "Documentation",
+    "source": "Source Code"
+  },
   "sidenav": {
     "section_1": {
       "title": "Basics",
@@ -17,7 +21,7 @@
     },
     "section_3": {
       "title": "User Interaction",
-      "mouse": "Mouse Event",
+      "pointer": "Pointer Event",
       "keyboard": "Keyboard Event"
     }
   },
@@ -45,8 +49,8 @@
       "title": "Dev log:"
     },
     "notes": {
-      "version": "RPG is currently in beta version 0.0.9.",
-      "migration": "Migrating to scala.js to take advantage of both the language features/performance advantages of scala and akka' concurrency model, which allows for multiprocesses on the browser.",
+      "version": "RPG is currently in beta version 0.0.4a.",
+      "migration": "Implementing physics in scala.js to take advantage of both the language features/performance advantages of scala and akka' concurrency model, which allows for multiprocesses on the browser. Code will be provided via the npm package vangogh500-physics.",
       "contribution": {
         "text": "Feel free to message me on my Github if you would like to contribute.",
         "link": "Link here."
@@ -54,19 +58,20 @@
     }
   },
   "boilerplate": {
-    "line_1": "A pixi app is initialized using the game component. Game loop is supplied here.",
-    "line_2": "The stage component creates the canvas and renderer for your app to use to display content. Thanks to Pixi.js, RPG will default to a basic HTML canvas if WebGL is not supported by the browser.",
-    "line_3": "The world (not yet implemented) provides physics for the bodies within it."
+    "line_1": "Try clicking on the canvas!",
+    "line_2": "The Loop component creates a game loop. The speed will depend on the browser's 'requestAnimationFrame', however fps can be capped for a normalized experience.",
+    "line_3": "The Stage component initializes a rendering engine and adds a DOM element to display it. The renderer is automatically hooked up to the game loop and will be rerendered accordingly. Although WebGL is implemented in most modern browsers, if WebGL is not supported the component will default to a standard HTML Canvas.",
+    "line_4": "The ResourceLoader component preloads all assets that are to be reused in your animations."
   },
   "geometry": {
     "line_1": "RPG comes with 2 basic geometric shapes to draw primitives."
   },
   "sprites": {
-    "line_1": "Sprites can be created by an url. However it is recommended to use resource provider to preload the assets for performance reasons.",
+    "line_1": "Sprites can be created by an url. However it is recommended to use resource loader to preload the assets for performance reasons.",
     "line_2": "In this example we provide the loader with a texture atlas of a sprite sheet (a sprite sheet is more efficient than loading in your assets seperately). The loader will refrain from rendering until all resources are loaded."
   },
   "animations": {
-    "line_1": "You can automatically access the game loop using the tick event component and passing a custom callback. Ticks are generated at around 30FPS and can be modified. Make sure you pass a reference to a function. It will be needed later for identification when the function is unhooked from the event listener.",
+    "line_1": "You can automatically access the game loop using the tick event component and passing a custom callback. A number representing the time elapsed since the last tick is passed to the callback if you choose to use it. In this example ticks are set to generate 30 times per second. Make sure you pass a reference to a function. It will be needed later for identification when the function is unhooked from the event listener.",
     "line_2": "This paradigm is an inspiration from the react-game-kit library."
   },
   "animatedsprite": {
@@ -74,5 +79,8 @@
   },
   "tilingsprite": {
     "line_1": "The tiling sprite allows you to create backgrounds from a single sprite."
+  },
+  "pointerevent": {
+    "line_1": "All touch and mouse related events can be accessed via the PointerEvent component."
   }
 }

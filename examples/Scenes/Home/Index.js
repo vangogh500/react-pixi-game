@@ -52,9 +52,17 @@ export default class Home extends React.Component {
         <Alert color="success">
           <FormattedMessage id="home.notes.contribution.text" /> <a href="https://github.com/vangogh500"><FormattedMessage id="home.notes.contribution.link" /></a>
         </Alert>
-        <h5>v0.0.9</h5>
+        <h5>v0.0.2a - Rendering</h5>
         <Label check>
-          <Input checked disabled type="checkbox" /> App: loop, stage, loaders
+          <Input checked disabled type="checkbox" /> Loop
+        </Label>
+        <br />
+        <Label check>
+          <Input checked disabled type="checkbox" /> Stage
+        </Label>
+        <br />
+        <Label check>
+          <Input checked disabled type="checkbox" /> ResourceLoader
         </Label>
         <br />
         <Label check>
@@ -78,19 +86,32 @@ export default class Home extends React.Component {
         </Label>
         <br/>
         <Label check>
-          <Input checked disabled type="checkbox" /> Container
+          <Input checked disabled type="checkbox" /> Tick Action
         </Label>
         <br/>
         <Label check>
-          <Input checked disabled type="checkbox" /> Tick Action
+          <Input checked disabled type="checkbox" /> Pointer Action
         </Label>
 
-        <h5 className="p-top-30px">v0.1.0</h5>
+        <h5 className="p-top-30px">v0.2.0 - Basic Physics</h5>
         <Label check>
-          <Input disabled type="checkbox" /> Migrate to scala.js
+          <Input disabled type="checkbox" /> Basic Particle Physics
+        </Label>
+        <br />
+        <Label check>
+          <Input disabled type="checkbox" /> Basic Rigid Body Physics
         </Label>
 
-        <h5 className="p-top-30px">v0.2.0</h5>
+        <h5 className="p-top-30px">v0.3.0 - User Interaction</h5>
+        <Label check>
+          <Input disabled type="checkbox" /> Expand Pointer Action
+        </Label>
+        <br />
+        <Label check>
+          <Input disabled type="checkbox" /> Keyboard Action
+        </Label>
+
+        <h5 className="p-top-30px">v0.4.0 - Filters</h5>
         <Label check>
           <Input disabled type="checkbox" /> Displacement Filter
         </Label>
@@ -101,28 +122,6 @@ export default class Home extends React.Component {
         <br />
         <Label check>
           <Input disabled type="checkbox" /> Color Matrix Filter
-        </Label>
-
-        <h5 className="p-top-30px">v0.3.0</h5>
-        <Label check>
-          <Input disabled type="checkbox" /> Mouse Action
-        </Label>
-        <br />
-        <Label check>
-          <Input disabled type="checkbox" /> Keyboard Action
-        </Label>
-
-        <h5 className="p-top-30px">v0.4.0</h5>
-        <Label check>
-          <Input disabled type="checkbox" /> Physics Environment
-        </Label>
-        <br />
-        <Label check>
-          <Input disabled type="checkbox" /> Physics Body
-        </Label>
-        <br />
-        <Label check>
-          <Input disabled type="checkbox" /> Forces
         </Label>
       </Jumbotron>
     )

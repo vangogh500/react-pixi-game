@@ -52,6 +52,8 @@ class MainNav extends React.Component<void,PropTypes,State> {
         <NavbarBrand tag={Link} className="font-quicksand font-size-lg" to="/">React Pixi Game</NavbarBrand>
         <Collapse id="mainnav-right" isOpen={this.state.isOpen} navbar>
           <Nav className="ml-auto line-height-lg" navbar>
+            <NavItem><NavLink href="https://github.com/vangogh500/react-pixi-game"><i className="material-icons icon-inline">code</i> <FormattedMessage id="mainnav.source" /></NavLink></NavItem>
+            <NavItem><NavLink href="./docs/index.html"><i className="material-icons icon-inline">library_books</i> <FormattedMessage id="mainnav.docs" /></NavLink></NavItem>
             <NavItem>
               <Dropdown isOpen={localeDropDownIsOpen} toggle={() => this.toggleLocaleDropDown()}>
                 <DropdownToggle nav>

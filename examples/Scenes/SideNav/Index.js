@@ -40,6 +40,15 @@ export default class SideNav extends React.Component<DefaultPropTypes, PropTypes
             <NavLink tag={Link}  to='/examples/tilingsprite' className="text-grey lighten-1 text-no-select"><FormattedMessage id="sidenav.section_1.tilingsprite" /></NavLink>
           </NavItem>
         </Nav>
+        <p className="p-top-30px text-uppercase text-no-select"><FormattedMessage id="sidenav.section_3.title" /></p>
+        <Nav vertical>
+          <NavItem>
+            <NavLink tag={Link} to='/examples/pointerevent' className="text-grey lighten-1 text-no-select"><FormattedMessage id="sidenav.section_3.pointer" /></NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink className="text-grey lighten-1 text-no-select" href="#"><FormattedMessage id="sidenav.section_3.keyboard" /></NavLink>
+          </NavItem>
+        </Nav>
         <p className="p-top-30px text-uppercase text-no-select"><FormattedMessage id="sidenav.section_2.title" /></p>
         <Nav vertical>
           <NavItem>
@@ -50,15 +59,6 @@ export default class SideNav extends React.Component<DefaultPropTypes, PropTypes
           </NavItem>
           <NavItem>
             <NavLink className="text-grey lighten-1 text-no-select" href="#"><FormattedMessage id="sidenav.section_2.animating" /></NavLink>
-          </NavItem>
-        </Nav>
-        <p className="p-top-30px text-uppercase text-no-select"><FormattedMessage id="sidenav.section_3.title" /></p>
-        <Nav vertical>
-          <NavItem>
-            <NavLink className="text-grey lighten-1 text-no-select" href="#"><FormattedMessage id="sidenav.section_3.mouse" /></NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink className="text-grey lighten-1 text-no-select" href="#"><FormattedMessage id="sidenav.section_3.keyboard" /></NavLink>
           </NavItem>
         </Nav>
       </div>

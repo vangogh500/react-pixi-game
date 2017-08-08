@@ -1,5 +1,5 @@
 {
-  "name": "boilerplate",
+  "name": "react-pixi-game-docs",
   "version": "0.0.1",
   "description": "Development environment for Hamu Software and Design",
   "main": "index.js",
@@ -47,7 +47,7 @@
     "react-addons-transition-group": "^15.6.0",
     "react-dom": "^15.5.3",
     "react-intl": "^2.3.0",
-    "react-pixi-game": "0.0.8",
+    "react-pixi-game": "0.0.4-a",
     "react-prism": "^4.3.0",
     "react-redux": "^5.0.5",
     "react-router": "^4.1.1",
