@@ -1,16 +1,16 @@
-import Game from './Game.js'
-import Stage from './Stage.js'
-import World from './World/Index.js'
-
+/* @flow */
+import Stage from './Components/Stage.js'
+import Loop from './Components/Loop.js'
+import ResourceLoader from './Components/ResourceLoader.js'
 // graphics
-import Sprite from './Graphics/Sprite.js'
-import AnimatedSprite from './Graphics/AnimatedSprite.js'
-import Rectangle from './Graphics/Rectangle.js'
-import Circle from './Graphics/Circle.js'
-import ResourceProvider from './ResourceProvider.js'
-import {withLoop} from './hocs.js'
+import Sprite from './Graphics/Components/Sprite.js'
+import AnimatedSprite from './Graphics/Components/AnimatedSprite.js'
+import TilingSprite from './Graphics/Components/TilingSprite.js'
+import Rectangle from './Graphics/Components/Rectangle.js'
+import Circle from './Graphics/Components/Circle.js'
+// events
 import TickEvent from './Events/TickEvent.js'
 
 export {
-  Game, Stage, World, Sprite, AnimatedSprite, Rectangle, Circle, withLoop, ResourceProvider, TickEvent
+  Stage, Loop, ResourceLoader, Sprite, AnimatedSprite, TilingSprite, Rectangle, Circle, TickEvent
 }

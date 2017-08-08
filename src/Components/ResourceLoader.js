@@ -2,11 +2,11 @@
 import React from 'react'
 import ReactPropTypes from 'prop-types'
 import {loaders} from 'pixi.js'
-import {contextProvider} from './hocs.js'
-import {deepCompareArray} from './utils.js'
+import {contextProvider} from '../hocs.js'
+import {deepCompareArray} from '../utils.js'
 
 /**
- * @memberof ResourceProvider
+ * @memberof ResourceLoader
  * @prop {Array<[string,string]>} res Resources in tuple form [name, path].
  */
 type PropTypes = {
@@ -20,7 +20,7 @@ type DefaultPropTypes = {
 
 /**
  * State Types
- * @memberof ResourceProvider
+ * @memberof ResourceLoader
  */
 type StateTypes = {
   loaded: boolean,
@@ -37,15 +37,15 @@ const Provider = contextProvider({ resources: ReactPropTypes.object.isRequired }
  * Provides resources for the game.
  * @example
  *
- * <ResourceProvider resources={['bunny', './bunny.png', 'octopus', './octopus.png']}>
+ * <ResourceLoader resources={['bunny', './bunny.png', 'octopus', './octopus.png']}>
  *  { // resource consumers go here }
- * </ResourceProvider>
+ * </ResourceLoader>
  */
-export default class ResourceProvider extends React.PureComponent<DefaultPropTypes,PropTypes,*>  {
+export default class ResourceLoader extends React.PureComponent<DefaultPropTypes,PropTypes,*>  {
   state: StateTypes
   /**
    * Default props.
-   * @memberof ResourceProvider
+   * @memberof ResourceLoader
    * @prop {Array<[string,string]>} defaultProps Defaults to an empty array.
    */
   static defaultProps = {
@@ -53,7 +53,7 @@ export default class ResourceProvider extends React.PureComponent<DefaultPropTyp
   }
   /**
    * Creates a loader configured by the resources.
-   * @memberof ResourceProvider
+   * @memberof ResourceLoader
    * @method
    * @static
    * @alias createLoaderFromResources
@@ -71,14 +71,14 @@ export default class ResourceProvider extends React.PureComponent<DefaultPropTyp
   constructor(props: PropTypes) {
     super(props)
     this.state = {
-      loader: ResourceProvider.createLoaderFromResources(this.props.resources),
+      loader: ResourceLoader.createLoaderFromResources(this.props.resources),
       loaded: false
     }
   }
 
   /**
    * Life cycle hook for mounting. Loads the resources.
-   * @memberof ResourceProvider
+   * @memberof ResourceLoader
    * @method
    * @instance
    */
@@ -95,26 +95,22 @@ export default class ResourceProvider extends React.PureComponent<DefaultPropTyp
 
   /**
    * Life cycle hook for mounting. Loads the resources.
-   * @memberof ResourceProvider
+   * @memberof ResourceLoader
    * @method
    * @instance
    * @prop {PropTypes} nextProps
    */
   componentWillReceiveProps(nextProps: PropTypes): void {
-    // work is done with props have been changed
     if(!deepCompareArray(this.props.resources, nextProps.resources)) {
       this.setState({ loaded: false })
-      // load resources not loaded already
-      const currentResourceStrings = this.props.resources.map(resource => resource.toString())
-      const resources = nextProps.resources.filter(resource => !currentResourceStrings.includes(resource.toString()))
-      const loader = ResourceProvider.createLoaderFromResources(resources)
+      const loader = ResourceLoader.createLoaderFromResources(nextProps.resources)
       loader.load(() => this.setState({ loader, loaded: true }))
     }
   }
 
   /**
    * Renders react element.
-   * @memberof ResourceProvider
+   * @memberof ResourceLoader
    * @method
    * @instance
    * @alias render

@@ -1,15 +1,17 @@
 /* @flow */
 import React from 'react'
-import {ticker} from 'pixi.js'
 import ReactPropTypes from 'prop-types'
-import {shallowCompare} from '../utils.js'
+import GameLoop from '../GameLoop.js'
+import mix from '../mixins/mix.js'
+import PropBasedUpdate from '../mixins/PropBasedUpdate.js'
+import NonDom from '../mixins/NonDom.js'
 import {withContext} from '../hocs.js'
 
 /**
  * @memberof TickEvent
  */
 type PropTypes = {
-  loop: ticker.Ticker,
+  loop: GameLoop,
   onTick: () => void
 }
 
@@ -24,7 +26,7 @@ type PropTypes = {
  *  )
  * }
  */
-class TickEvent extends React.Component<void,PropTypes,void> {
+class TickEvent extends mix(React.Component).with(PropBasedUpdate, NonDom) {
   /**
    * Life cycle hook for mounting.
    * @memberof TickEvent
@@ -44,21 +46,8 @@ class TickEvent extends React.Component<void,PropTypes,void> {
    * @alias componentWillUnmount
    */
   componentWillUnmount(): void {
-    console.log('Tick Event unmount')
     const {loop, onTick} = this.props
     loop.remove(onTick)
-  }
-  /**
-   * Optimization for life cycle hooks.
-   * @memberof TickEvent
-   * @instance
-   * @method
-   * @alias shouldComponentUpdate
-   * @param {PropTypes} nextProps
-   * @returns {boolean} If component should update.
-   */
-  shouldComponentUpdate(nextProps: PropTypes): boolean {
-    return !shallowCompare(this.props, nextProps)
   }
   /**
    * Life cycle hook for updating.
@@ -71,18 +60,6 @@ class TickEvent extends React.Component<void,PropTypes,void> {
   componentWillUpdate(nextProps: PropTypes): void {
     this.props.loop.remove(this.props.onTick)
     nextProps.loop.add(nextProps.onTick)
-  }
-
-  /**
-   * Renders react element.
-   * @memberof TickEvent
-   * @instance
-   * @method
-   * @alias render
-   */
-  render(): ?React.Element<*> {
-    console.log('TickEvent render')
-    return null
   }
 }
 
