@@ -1,6 +1,6 @@
 {
   "name": "react-pixi-game",
-  "version": "0.0.1a",
+  "version": "0.0.2a",
   "description": "Create a game using react and pixi",
   "main": "./dist/index.js",
   "scripts": {

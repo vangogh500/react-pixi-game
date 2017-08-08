@@ -24,7 +24,7 @@ type PropTypes = {
   height: number,
   resolution: number,
   className?: string,
-  loop: GameLoop,
+  loop?: GameLoop,
   children?: React.Children
 }
 
@@ -75,15 +75,16 @@ class Stage extends mix(React.Component).with(PropBasedUpdate) {
     const {loop} = this.props
     const { renderer, container } = this.state
     this.refs.domcontainer.appendChild(renderer.view)
-    loop.add(this.update)
+    if(loop) { loop.add(this.update) }
   }
 
   /**
    * Life cycle hook for unmounting. Unhooks the rendering engine from the game loop and DOM.
    */
   componentWillUnmount() {
+    const {loop} = this.props
     const {renderer} = this.state
-    loop.remove(this.update)
+    if(loop) { loop.remove(this.update) }
     this.refs.domcontainer.removeChild(renderer.view)
   }
 
@@ -104,6 +105,6 @@ class Stage extends mix(React.Component).with(PropBasedUpdate) {
 }
 
 const contextTypes = {
-  loop: ReactPropTypes.object.isRequired
+  loop: ReactPropTypes.object
 }
 export default withContext(contextTypes)(Stage)
