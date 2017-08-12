@@ -1,35 +1,19 @@
 /* @flow */
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {Stage, Loop, ResourceLoader, Rectangle, TickEvent, PointerEvent} from '../dist/index.js'
-import Circle from '../src/Graphics/Components/Circle.js'
-import {Vector} from 'vangogh500-physics'
-
-class Animation extends React.Component {
-  state = {
-    pos: new Vector(400,300)
-  }
-  handleClick = (function(event) {
-    const {x,y} = event.data.global
-    this.setState({ pos: new Vector(x,y) })
-  }).bind(this)
-  render() {
-    const {pos} = this.state
-    return (
-      <div>
-        <Circle position={pos} size={new Vector(150,100)} color={0x888FFF} />
-        <PointerEvent onPointerDown={this.handleClick} />
-      </div>
-    )
-  }
-}
+import {Stage, Loop, ResourceLoader, Rectangle, TickEvent, PointerEvent, Circle} from '../dist/index.js'
+import World from '../src/World/Components/World.js'
+import Body from '../src/World/Components/Body.js'
+import {Vector, Velocity} from 'vangogh500-physics'
 
 ReactDOM.render(
   <Loop>
     <Stage>
-      <ResourceLoader resources={[['example', '/assets/spritesheet.json']]}>
-        <Animation />
-      </ResourceLoader>
+      <World>
+        <Body id="particle1" initialState={Velocity(Vector(10), Vector())}>
+          <Circle positon={Vector(100)} size={Vector(150,100)} color={0x888FFF} />
+        </Body>
+      </World>
     </Stage>
   </Loop>,
   document.getElementById('app')

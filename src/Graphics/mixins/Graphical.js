@@ -1,7 +1,7 @@
 /* @flow */
 import {Graphics as PIXIGraphics, Point as PIXIPoint} from 'pixi.js'
 import type {Container as PIXIContainer} from 'pixi.js'
-import {Vector} from 'vangogh500-physics'
+import {Vector, Component} from 'vangogh500-physics'
 import mix from '../../mixins/mix.js'
 import PropBasedUpdate from '../../mixins/PropBasedUpdate.js'
 import Mounted from './Mounted.js'
@@ -14,7 +14,8 @@ type PropTypes = {
   rotation: Vector,
   anchor: Vector,
   size: Vector,
-  container: PIXIContainer
+  container: PIXIContainer,
+  body: ?Component
 }
 
 /**

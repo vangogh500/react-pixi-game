@@ -11,12 +11,11 @@ export default class GameLoop {
   fpsCap: number
   playing: boolean
   constructor(fpsCap: number = 30, listeners: Array<(dt: number) => void> = []) {
-    console.log("test")
     this.listeners = listeners
     this.playing = false
     this.fpsCap = fpsCap
   }
-  
+
   /**
    * Subscribe a listener to the loop.
    */
