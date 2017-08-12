@@ -11,7 +11,8 @@ module.exports = {
   },
   externals: {
     'react': 'react',
-    'react-dom': 'react-dom'
+    'react-dom': 'react-dom',
+    'vangogh500-physics': 'vangogh500-physics'
   },
   target: 'node',
   module: {

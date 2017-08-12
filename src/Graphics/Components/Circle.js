@@ -46,7 +46,8 @@ class Circle extends mix(React.Component).with(Graphical) {
 }
 
 const contextTypes = {
-  container: ReactPropTypes.object.isRequired
+  container: ReactPropTypes.object.isRequired,
+  position: ReactPropTypes.object
 }
 
 export default withContext(contextTypes)(Circle)

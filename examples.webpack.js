@@ -1,5 +1,5 @@
 module.exports = {
-  entry: './playground/index.js',
+  entry: __dirname + '/playground/index.js',
   output: {
     path: __dirname +'/playground/build/js',
     publicPath: '/js/',

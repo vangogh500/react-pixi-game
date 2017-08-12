@@ -34,7 +34,7 @@ type StateTypes = {
  */
 class Body extends React.PureComponent {
   static Provider = contextProvider({ body: ReactPropTypes.object }, (props) => {
-    return { body: props.environment }
+    return { body: props.body }
   })
 
   state: StateTypes

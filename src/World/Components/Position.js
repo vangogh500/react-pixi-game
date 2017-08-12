@@ -5,13 +5,13 @@ import {App as PhysicsApp, Component as BodyComponent} from 'vangogh500-physics'
 import {contextProvider, withContext} from '../../hocs.js'
 import mix from '../../mixins/mix.js'
 import PropBasedUpdate from '../../mixins/PropBasedUpdate.js'
-import PureProvider from '../mixins/PureProvider.js'
+import PureProvider from '../../mixins/PureProvider.js'
 
 /**
  * @memberof Body
  */
 type PropTypes = {
-  body: BodyComponent
+  body: BodyComponent,
   children?: React.Children
 }
 
