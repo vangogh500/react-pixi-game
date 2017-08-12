@@ -7,7 +7,7 @@
     "test": "karma start",
     "build": "./node_modules/.bin/webpack",
     "doc": "documentation build src/** -f html -o docs",
-    "playground": "./node_modules/.bin/webpack --config examples.webpack.js"
+    "playground": "./node_modules/.bin/webpack-dev-server --config examples.webpack.js --content-base playground/"
   },
   "repository": {
     "type": "git",
@@ -45,9 +45,10 @@
   },
   "dependencies": {
     "pixi.js": "^4.5.4",
-    "vangogh500-physics": "0.0.7"
+    "vangogh500-physics": "0.0.8"
   },
   "peerDependencies": {
+    "vangogh500-physics": "0.0.7",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   }

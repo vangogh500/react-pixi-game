@@ -23,9 +23,13 @@ type PropTypes = {
  *  { \\bodies go here }
  * </World>
  */
-class Position extends mix(React.Component).with(PropBasedUpdate, PureProvider({ position: ReactPropTypes.object.isRequired })) {
-  childContext() {
-    return { position: this.props.body.s }
+class Position extends React.Component {
+  render(){
+    return (
+      <div>
+        {React.cloneElement(this.props.children, { position: this.props.body.s })}
+      </div>
+    )
   }
 }
 

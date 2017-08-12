@@ -22,6 +22,7 @@ class Circle extends mix(React.Component).with(Graphical) {
   drawGraphics() {
     const {graphics} = this.state
     const {color, alpha, position, size, rotation} = this.props
+    console.log("draw")
     graphics.beginFill(color)
     graphics.position.x = position.x
     graphics.position.y = position.y
@@ -38,16 +39,12 @@ class Circle extends mix(React.Component).with(Graphical) {
     const {graphics} = this.state
     const {color, alpha, position, size, rotation} = props
     graphics.setTransform(position.x, position.y, 1, 1, rotation.z)
-    graphics.alpha = alpha
-    graphics.width = size.x * 2
-    graphics.height = size.y * 2
-    graphics.graphicsData[0].fillColor = color
+    
   }
 }
 
 const contextTypes = {
-  container: ReactPropTypes.object.isRequired,
-  position: ReactPropTypes.object
+  container: ReactPropTypes.object.isRequired
 }
 
 export default withContext(contextTypes)(Circle)

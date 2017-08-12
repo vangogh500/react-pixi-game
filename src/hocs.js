@@ -34,7 +34,7 @@ export const contextProvider = <P: PropTypes>(childContextTypes: {}, getChildCon
  * @returns {function} A function which takes a component and returns a hoc which has access to context.
  */
 export const withContext = (contextTypes: {}) => (Component: Class<React.Component<*,*,*>>): Class<React.PureComponent<*,*,*>> => {
-  return class ContextConsumer extends React.PureComponent {
+  return class ContextConsumer extends React.Component {
     static contextTypes = contextTypes
 
     render(): React.Element<*> {
