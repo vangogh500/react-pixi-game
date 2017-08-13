@@ -1,16 +1,20 @@
 /* @flow */
 import React from 'react'
 import ReactPropTypes from 'prop-types'
-import {App as PhysicsApp} from 'vangogh500-physics'
+import {App as PhysicsApp, Mutator} from 'vangogh500-physics'
 import {contextProvider, withContext} from '../../hocs.js'
 import GameLoop from '../../GameLoop.js'
-
 
 /**
  * @memberof World
  */
 type PropTypes = {
+  mutators: Array<Mutator>,
   children?: React.Children
+}
+
+type DefaultPropTypes = {
+  mutators: Array<Mutator>
 }
 
 /**
@@ -30,7 +34,10 @@ type StateTypes = {
  *  { \\bodies go here }
  * </World>
  */
-class World extends React.PureComponent {
+class World extends React.PureComponent<DefaultPropTypes, PropTypes, StateTypes> {
+  static defaultProps = {
+    mutators: []
+  }
   static Provider = contextProvider({ environment: ReactPropTypes.object }, (props) => {
     return { environment: props.environment }
   })
@@ -41,7 +48,7 @@ class World extends React.PureComponent {
   constructor(props) {
     super(props)
     this.state = {
-      app: new PhysicsApp(),
+      app: new PhysicsApp(props.mutators),
       loaded: false
     }
   }
