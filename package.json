@@ -47,7 +47,7 @@
     "pixi.js": "^4.5.4"
   },
   "peerDependencies": {
-    "vangogh500-physics": "0.0.9",
+    "vangogh500-physics": "0.0.3a",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   }

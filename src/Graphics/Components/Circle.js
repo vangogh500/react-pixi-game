@@ -39,7 +39,10 @@ class Circle extends mix(React.Component).with(Graphical) {
     const {graphics} = this.state
     const {color, alpha, position, size, rotation} = props
     graphics.setTransform(position.x, position.y, 1, 1, rotation.z)
-    
+    graphics.alpha = alpha
+    graphics.width = size.x * 2
+    graphics.height = size.y * 2
+    graphics.graphicsData[0].fillColor = color
   }
 }
 

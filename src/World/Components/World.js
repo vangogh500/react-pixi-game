@@ -9,12 +9,14 @@ import GameLoop from '../../GameLoop.js'
  * @memberof World
  */
 type PropTypes = {
-  mutators: Array<Mutator>,
+  pre: Array<Mutator>,
+  post: Array<Mutator>,
   children?: React.Children
 }
 
 type DefaultPropTypes = {
-  mutators: Array<Mutator>
+  pre: Array<Mutator>,
+  post: Array<Mutator>
 }
 
 /**
@@ -36,7 +38,8 @@ type StateTypes = {
  */
 class World extends React.PureComponent<DefaultPropTypes, PropTypes, StateTypes> {
   static defaultProps = {
-    mutators: []
+    pre: [],
+    post: []
   }
   static Provider = contextProvider({ environment: ReactPropTypes.object }, (props) => {
     return { environment: props.environment }
@@ -48,7 +51,7 @@ class World extends React.PureComponent<DefaultPropTypes, PropTypes, StateTypes>
   constructor(props) {
     super(props)
     this.state = {
-      app: new PhysicsApp(props.mutators),
+      app: new PhysicsApp(props.pre, props.post),
       loaded: false
     }
   }

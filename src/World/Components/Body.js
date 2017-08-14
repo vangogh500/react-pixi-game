@@ -12,6 +12,7 @@ import PropBasedUpdate from '../../mixins/PropBasedUpdate.js'
 type PropTypes = {
   id: string,
   initialState: BodyComponent,
+  middleware: (state: BodyComponent) => {},
   environment: PhysicsApp,
   children?: React.Children
 }
@@ -74,11 +75,11 @@ class Body extends React.PureComponent {
    */
   render(): React.Element<*> {
     const {loaded, state} = this.state
-    const {children} = this.props
+    const {children, middleware} = this.props
     if(loaded) {
       return (
         <Body.Provider body={state}>
-          {children}
+          {React.cloneElement(this.props.children, middleware(state))}
         </Body.Provider>
       )
     }
