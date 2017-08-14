@@ -12,6 +12,11 @@ import Circle from './Graphics/Components/Circle.js'
 import TickEvent from './Events/TickEvent.js'
 import PointerEvent from './Events/PointerEvent.js'
 
+// world
+import World from './World/Components/World.js'
+import Body from './World/Components/Body.js'
+import BodyMiddleware from './World/Middleware.js'
+
 export {
-  Stage, Loop, ResourceLoader, Sprite, AnimatedSprite, TilingSprite, Rectangle, Circle, TickEvent, PointerEvent
+  Stage, Loop, ResourceLoader, Sprite, AnimatedSprite, TilingSprite, Rectangle, Circle, TickEvent, PointerEvent, World, Body, BodyMiddleware
 }
