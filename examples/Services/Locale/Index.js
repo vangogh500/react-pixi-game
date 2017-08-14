@@ -48,9 +48,8 @@ class LocaleProvider extends React.Component<void,PropTypes,State> {
   render() {
     const accepted_languages = ['en', 'ja']
     const {locale, location} = this.props
-    const lang = parseQuery(location.search).lang
-    if(!lang || locale !== lang) {
-      return <Redirect to={location.pathname + '?lang=' + locale} />
+    if(!accepted_languages.includes(locale)) {
+      return <Redirect to={location.pathname + '?lang=en'} />
     }
     return (
       <IntlProvider locale={locale} messages={this.state.localeData[locale]}>
